@@ -1,0 +1,74 @@
+project:
+  type: website
+  preview:
+    port: 4200
+  resources:
+    - "_assets/img"
+    - "_assets/font"
+
+website:
+  page-navigation: false
+  title: "James Doss-Gollin's Presentations"
+  description: "James Doss-Gollin's Presentations"
+  site-url: https://jdossgollin.github.io/presentations-site
+  repo-url: https://www.github.com/jdossgollin/presentations-site
+  repo-actions: [edit, issue]
+  open-graph: true
+
+# citations
+bibliography: _bibliography/library-bibtex.bib
+csl: _assets/references/american-geophysical-union.csl
+
+# math
+html-math-method: mathjax
+include-in-header: _assets/html/mathjax-config.html
+
+# reveal-auto-agenda extension
+filters:
+  - reveal-auto-agenda
+
+auto-agenda:
+  bullets: numbered
+  heading: Today
+
+format:
+  # customization for HTML documents (i.e., the website)
+  html:
+    theme: 
+      [simplex, _assets/sass/theme.scss]
+    mainfont: "Atkinson Hyperlegible"
+    copy-code: true
+    code-overflow: wrap
+    toc: true
+    anchor-sections: true
+    callout-appearance: simple
+    reference-location: document
+    citations-hover: true
+    code-annotations: hover
+    date-format: "ddd., MMM. D"
+  
+  # customization for RevealJS (i.e., the slides)
+  revealjs:
+    
+    # page numbering
+    slide-number: c/t
+    show-slide-number: all
+
+    # page layout and transition
+    center-title-slide: true
+    width: 1280
+    height: 720
+    transition: none
+    toc: false
+    history: false
+    menu:
+        numbers: true
+    
+    # code, links, and refs
+    link-external-newwindow: true
+    citations-hover: true
+    code-annotations: below
+
+    date-format: long
+
+    pdf-separate-fragments: true

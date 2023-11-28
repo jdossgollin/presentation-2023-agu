@@ -1,0 +1,294 @@
+---
+title: "A Bayesian Spatial Hierarchical Framework for Process-Informed Nonstationary Analysis of Precipitation Frequencies"
+author:
+    - name: "**James Doss-Gollin**"
+      orcid: 0000-0002-3428-2224
+      affiliations:
+        - name: Rice University
+    - name: Yuchen Lu
+      affiliations:
+        - name: Rice University
+    - name: Benjamin Seiyon Lee
+      orcid: 0000-0003-0658-7458
+      affiliations:
+        - name: George Mason University
+
+date: 2023-11-10
+footer:  \@jdossgollin
+format:
+    revealjs:
+        theme: [default, ../_assets/sass/slides.scss]
+---
+
+## Teamwork Makes the Dream Work {.smaller}
+
+::::: {.columns}
+:::: {.column width="10%"}
+::::
+:::: {.column width="80%"}
+::: {layout-ncol=4 layout-valign="top"}
+
+![**Yuchen Lu**](../_assets/img/people/yuchenlu.jpg)
+
+![Benjamin Seiyon Lee](../_assets/img/people/seiyon-lee.jpg)
+
+![John Nielsen-Gammon](../_assets/img/people/nielsen-gammon.jpg)
+
+![Rewati Niraula](../_assets/img/people/rewati-niraula.jpg)
+:::
+::::
+
+:::: {.column width="40%"}
+Slides: [{{< var url-short >}}]({{< var url >}})
+::::
+:::: {.column width="20%"}
+::::
+:::: {.column width="40%"}
+::: {layout-ncol=2 layout-valign="center"}
+
+![](../_assets/img/logos/twdb.png)
+
+![](../_assets/img/logos/Rice_Logo_280_Blue.svg)
+
+:::
+::::
+:::: {.column width="30%"}
+::::
+:::::
+
+
+# Motivation
+
+## Heavy rainfall: Texas and 🌎 {.smaller}
+
+::::: {.columns}
+:::: {.column width="5%"}
+::::
+:::: {.column width="90%"}
+::: {layout-ncol=4}
+
+![Mesquite, TX, 2022](https://media.npr.org/assets/img/2022/08/22/ap22234695884313-c1c82ee563b42ff28034be4a371acb099ae88c9a-s1600-c85.webp)
+
+![Houston, 2017](https://cdn.vox-cdn.com/thumbor/TUffMXPQKxnxsmL3GrhbWItAEBw=/0x0:3000x2000/1820x1213/filters:focal(1260x760:1740x1240):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/56417707/840239148.0.jpg)
+
+![Magnolia, TX, 2016](https://static01.nyt.com/images/2016/05/30/us/31xp-FLOODING/31xp-FLOODING-superJumbo.jpg?quality=75&auto=webp)
+
+![Houston, TX, 2016](https://s.hdnux.com/photos/64/02/43/13641980/4/rawImage.jpg)
+
+![Hong Kong, 2023](https://static01.nyt.com/images/2023/09/08/multimedia/08china-flood-cmtl/08china-flood-cmtl-superJumbo.jpg?quality=75&auto=webp)
+
+![Montpelier, VT, 2023](https://static01.nyt.com/images/2023/07/11/multimedia/11flooding-vt-motorists2-zbwv/11flooding-vt-motorists2-zbwv-superJumbo.jpg?quality=75&auto=webp)
+
+![Santa Catarina, Brazil, 2022](https://www.reuters.com/resizer/1EPd9mEizuzIRaar70Sisbsbntc=/1920x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/4F23LASZIJMR7MEK3N7H2TJETM.jpg)
+
+![Zhengzhou, China, 2021](https://i0.wp.com/yaleclimateconnections.org/wp-content/uploads/2021/07/0721_Zhengzhou-flood_1600.jpg?w=1600&ssl=1)
+
+:::
+::::
+:::: {.column width="5%"}
+::::
+:::::
+
+---
+
+::: {#fig-idf-curves layout-ncol="2"}
+
+![](https://s.hdnux.com/photos/01/33/37/34/23983935/5/1200x0.jpg)
+
+![](../_assets/img/cartoon/idf.png)
+
+Engineers use IDF curves for adaptation
+:::
+
+
+
+
+## Existing guidance leaves gaps {.smaller}
+
+::: {#fig-fight-idf}
+![](../_assets/img/meme/fight-idf.png)
+
+[\@hydroclim_memes](https://www.instagram.com/hydroclim_memes/)
+:::
+
+## Yet *addressing* nonstationarity is hard {.smaller}
+
+:::{#fig-gnome-nonstationarity}
+![](../_assets/img/meme/gnome-nonstationarity.jpg)
+
+[\@hydroclim_memes](https://www.instagram.com/hydroclim_memes/)
+:::
+
+
+# Conceptual framework
+
+## Nonstationary extreme value models
+
+Generic nonstationary model for annual maximum precipitation:
+$$
+y(\vb{s}, t) \sim \text{GEV} (\mu(\vb{s}, t), \sigma(\vb{s}, t), \xi(\vb{s}, t))
+$$
+
+::: {.fragment .fade-in}
+**Process-informed** models condition parameters on climate indices $\vb{X}(t)$ and spatial feature $\vb{Z}(\vb{s})$ [@schlef_idf:2023;@cheng_nonstationary:2014;@salas_review:2018]
+$$
+\theta(\vb{s}, t) = \alpha + \beta(\vb{s}) \times \vb{X}(t) + \phi \times \vb{Z}(\vb{s})
+$$
+where $\theta \in \{\mu, \sigma, \xi \}$
+:::
+
+## Estimation uncertainty is an Achilles heel {.smaller}
+
+::::: {.columns}
+:::: {.column width="45%"}
+::: {.fragment}
+![@fagnant_spatiotemporal:2020](../_assets/img/external-papers/fagnant-spatiotemporal-2020-5.jpeg){height=5.5in}
+:::
+::::
+:::: {.column width="55%"}
+::: {.fragment}
+![@serinaldi_undead:2015](../_assets/img/external-papers/serinaldi-undead-2015-4.jpg){height=5.5in}
+:::
+::::
+:::::
+
+# Case study
+
+## Data
+
+::: {#fig-nobs}
+![](../_assets/img/lu-2023/2023-11-09/raw_data_nobs_199s.png){width=100%}
+
+We retain 199 GHCND stations which have at least 30 years with 362+ days of data.
+Colors indicate number of years of data used.
+:::
+
+## Spatially Varying Covariates
+
+::: {.fragment}
+Bayesian hierarchical space-time model:
+$$
+\begin{aligned}
+y(\vb{s}, t) &\sim \text{GEV} (\mu(\vb{s}, t), \sigma(\vb{s}, t), \xi) \\
+\mu(\vb{s}, t) &= \alpha^\mu + \beta^\mu_1(\vb{s}) \times \ln \text{CO}_2(t) \\
+\log \sigma(\vb{s}, t) &= \alpha^\sigma + \beta^\sigma_1(\vb{s}) \times \ln \text{CO}_2(t) \\ 
+\end{aligned}
+$$
+:::
+
+::: {.fragment}
+Assume: **latent** parameters $\alpha^\mu, \beta^\mu_1, \alpha^\sigma, \beta^\sigma_1$ are smooth in space.
+Hierarchical spatial prior:
+$$
+\theta(\vb{s}) \sim \text{GP} \left( m, K(\vb{s}, \vb{s}') \right)
+$$
+for $\theta \in \{\alpha^\mu, \beta^\mu_1, \alpha^\sigma, \beta^\sigma_1 \}$ and
+$K = \alpha^2 \exp \left(-\frac{ \| \vb{s} - \vb{s}' \| }{\rho} \right)$ 
+:::
+
+## Shifting and widening of the distribution {.smaller}
+
+::: {#fig-trend-coeffs}
+![](../_assets/img/lu-2023/2023-11-09/map_parameters_point_199s.png)
+
+Posterior mean of trend coefficients.
+Specifically, how much do
+(T): location parameter and
+(B): log scale parameter
+increase with $\ln \text{CO}_2$?
+For reference, an increase from 300 (pre-industrial) to 400 (current) ppm is approximately 0.29 on the log scale and an increase from 400 to 500 (mid-century under RCP 4.5/6) is approximately 0.22.
+:::
+
+## Estimated return levels}
+
+::: {#fig-rl100}
+![](../_assets/img/lu-2023/2023-11-09/map_rl100_stations_2021.png)
+
+Posterior mean of 100 year return level for 1 day duration at stations, using 2021 covariates ($\ln \text{CO}_2$).
+:::
+
+## Trends and comparison
+
+::: {#fig-comparison}
+![](../_assets/img/lu-2023/2023-11-09/map_difference.png)
+
+(T): Change in posterior mean of 10, 50, and 100 year return levels from 1940--2021.
+(B): Difference between our posterior mean for 2021 and Atlas 14. Red (blue) indicates our estimates are lower (higher).
+:::
+
+## Well-calibrated inferences
+
+::: {#fig-calibration}
+![](../_assets/img/lu-2023/2023-11-09/quantiles.png)
+
+Quantiles of the observation records given the simulated posterior GEV distributions.
+An ideal model would have a uniform distribution.
+:::
+
+## Discussion
+
+::: {.incremental}
+1. Brand new results -- validation ongoing and feedback appreciated
+1. Is Atlas 14 too high in SE TX [@nielsen-gammon_harris:2020]?
+    - Small "region of influence" neglects that Harvey could have hit a wide range
+    - Stationary model, short-record stations, sampling only from recent years (Missing at Random)
+1. Are our results too low in SE TX?
+    - Possible over-smoothing ($\rho$ large)
+    - Daily maxima $\neq$ 24 hour maxima
+    - Separate trends for $\mu$ and $\sigma$
+:::
+
+# Ongoing work
+
+## More stations (ongoing)
+
+::: {#fig-more-stations}
+![](../_assets/img/lu-2023/2023-11-09/all_stations_map.png){width=100%}
+
+TAMU/TWDB teams have gathered $>4000$ stations (not all open access).
+Includes long-duration daily stations, mesonets (short records at high temporal resolution), and more.
+:::
+
+## Parametric duration dependence (ongoing) {.smaller}
+
+Adding a few parameters, we explicitly and flexibly model the GEV parameters as a function of duration $d$ [@ulrich_idf:2020; @koutsoyiannis_idf:1998; @fauer_idf:2021]:
+$$
+\begin{aligned}
+\sigma (d) &=  \sigma_0 (d + \theta) ^ {\eta_1 + \eta_2 }  + \tau \\
+\mu (d) &= \tilde{\mu} (\sigma_0 (d + \theta ) ^ {-\eta_1 }  + \tau)
+\end{aligned}
+$$
+
+::: {#fig-fauer}
+![](../_assets/img/external-papers/fauer-idf-2021-2.png)
+
+Duration-dependent parameterizations can capture multiple IDF curve behaviors [@fauer_idf:2021]
+:::
+
+# Conclusions
+
+## Summary
+
+Spatially Varying Covariates Model
+
+::: {.incremental}
+1. Bayesian space-time model with latent parameters (including trends) assumed to be smooth in space
+1. Flexible approach yields credible inferences
+1. Probabilistic framework to integrate future improvements
+:::
+
+:::: {.columns}
+::: {.column width=60%}
+[dossgollin-lab.github.io](https://dossgollin-lab.github.io)
+:::
+::: {.column width=40%}
+::: {layout-ncol=2 layout-valign="center"}
+![](../_assets/img/logos/twdb.png)
+
+![](../_assets/img/logos/Rice_Logo_280_Blue.svg)
+:::
+:::
+::::
+
+
+## References {.smaller .scrollable}

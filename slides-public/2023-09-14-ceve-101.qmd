@@ -1,0 +1,210 @@
+---
+title: "Statistics for Climate Risk Management"
+author: "James Doss-Gollin"
+date: 2023-09-14
+format:
+    revealjs:
+        theme: [default, ../_assets/sass/slides.scss]
+---
+
+## Follow along
+
+:::: {.columns}
+::: {.column width="50%"}
+![[jdossgollin.github.io/presentations-site](https://jdossgollin.github.io/presentations-site)](../_assets/img/QR-code.png){width="400px"}
+:::
+::: {.column width="50%"}
+Download as PDF:
+
+1. Navigate to the presentation
+1. Press `e` to print
+
+Works best on Chrome / Brave.
+Detailed instructions [here](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf)
+:::
+::::
+
+# How do we use probabilities?
+
+## How do we manage climate risks?
+
+::: {.incremental}
+1. Reduce emissions to prevent future climate change ("mitigation")
+1. Real-time monitoring and forecasting
+1. Building codes and design standards
+1. Insurance
+1. ...
+:::
+
+## Sizing a stormwater pipe
+
+::::: {.columns}
+:::: {.column width="60%"}
+::: {.incremental}
+1. Rainfall-runoff model
+    - rational method: $Q= C i A$ where $i$ is rainfall intensity, $A$ is area, and $C$ is runoff coefficient
+1. Common standard: $\Pr \left\{i > i^* \right\} = 1/T$
+    - Annual probability that $i > i^*$ is $1/T$
+1. Size your culvert to handle $Q^* = Ci^*A$
+1. Requires knowing $p(i)$!
+    - Probability distribution of $i$
+:::
+::::
+:::: {.column width="40%"}
+![Drainage installation](https://s.hdnux.com/photos/01/33/37/34/23983935/5/1200x0.jpg){width=100%}
+::::
+:::::
+
+## Floodplain mapping in a riverine system
+
+::::: {.columns}
+:::: {.column width="60%"}
+::: {.notes}
+This is a moderately simplified workflow
+:::
+
+::: {.incremental}
+1. Estimate the 99th percentile (100 year *return level*) of *annual maximum* streamflows $Q$
+1. Use a hydraulic model to model where the water goes
+1. Requires knowing $p(Q)$
+:::
+::::
+:::: {.column width="40%"}
+![Floodplain in Selinsgrove, PA](../_assets/img/selinsgrove-floodplain.png){width=100%}
+::::
+:::::
+
+## Index insurance pricing
+
+::: {.incremental}
+
+1. Index insurance: if some index $I$ is above a threshold $I^*$, pay out $X$
+    - Total rainfall in a season, area flooded, etc
+1. Let $p^* = \Pr \left\{I > I^* \right\}$ is the probability of a payout
+1. Naive pricing uses a point estimate of $p^*$: $\frac{R}{X} = \mathbb{E} \left[ p^* \right]$
+1. Risk pricing accounts for uncertainty in estimating $p^*$: $\frac{R}{X} = \mathbb{E}[p^*] + \lambda \mathbb{V}^{1/2}[p^*]$
+    - Requires knowing $p(p*)$!
+
+:::
+
+## Social cost of carbon
+
+A chain of *conditional probabilities*:
+
+::: {.incremental}
+1. $p \left( CO_2 \, \mid \, \text{policy} \right)$
+1. $p \left( T \, \mid \, CO_2 \right)$ (*climate sensitivty*)
+1. $p \left( \text{local hazard} \, \mid \, T \right)$
+1. $p \left( \text{damages} \, \mid \, \text{local hazard} \right)$
+:::
+
+. . .
+
+::: {.callout-note}
+## Important point
+
+Choices of *which* damages to value (and *to whom*) matters a lot [@errickson_methane:2021]!
+:::
+
+## Other decisions use probabilities
+
+::: {.incremental}
+
+1. Seasonal electricity resource adequacy [@doss-gollin_txtreme:2021]
+1. Levee design [@garner_slrise:2018]
+1. Water supply planning [@fletcher_mombasa2019]
+1. Multihazard design [@bruneau_multihazard:2017]
+1. etc...
+
+:::
+
+. . .
+
+::: {.callout-note}
+## Caveat
+
+This is not to neglect the importance of *epistemic* or *deep* uncertainties whose probability distributions cannot be *objectively* determined.
+:::
+
+# Where do we get probabilities?
+
+## Example: storm surge
+
+:::: {.columns}
+::: {.column width="10%"}
+:::
+::: {.column width="35%"}
+![Waves](https://www.infoplaza.com/hubfs/waves-ocean-marine-unsettling.jpg){width="100%"}
+![Synoptic Forecast](https://www.infoplaza.com/hs-fs/hubfs/Figure1-week1.png?width=3150&height=1746&name=Figure1-week1.png){width="100%"}
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="35%"}
+![Ike flood depths](https://www.weather.gov/images/lch/tropical/ike/Ike_Inundation.png){width="100%"}
+![Ike path](https://upload.wikimedia.org/wikipedia/commons/5/5f/Ike_2008_track.png){width="100%"}
+:::
+::: {.column width="10%"}
+:::
+::::
+
+## Problem statement:
+
+> You are have been comissioned by a small coastal community to quantify the probability distribution of storm surge heights at their location.
+This knowledge will help them identify properties at risk of flooding, update zoning codes, and plan for future development.
+
+## Estimate probability from historical data
+
+::::: {.columns}
+:::: {.column width="40%"}
+![Maximum water levels at Galveston](http://www.u-surge.net/uploads/6/4/8/8/64884233/screen-shot-2018-04-04-at-4-42-49-pm_2.png){width=100%}
+![Return levels](http://www.u-surge.net/uploads/6/4/8/8/64884233/published/screen-shot-2018-04-04-at-5-33-05-pm_1.png){width=80%}
+::::
+:::: {.column width="50%"}
+::: {.incremental}
+**Limitations?**
+
+1. No climate change (*stationarity*)
+1. Short record
+1. ➡️ what is probability of a really big storm?
+
+:::
+::::
+:::::
+
+## Tropical cyclone tracks and characteristics
+
+Estimate the probabilty distribution of tropical cyclone characteristics from historical data, *conditional* on weather data, and generate large numbers of *synthetic* storms.
+
+![@bloemendaal_synthetictc:2020](../_assets/img/Bloemendaa-2020-fig1.png){width=100%}
+
+## Wind and rainfall fields
+
+For our *synthetic storms* we will need to model the wind and rainfall fields to generate storm surge
+
+![@kleiber_tcprecip:2023](../_assets/img/kleiber-2023.jpg){width=100%}
+
+## Sea level
+
+:::: {.columns}
+::: {.column width="50%"}
+![Galveston Relative Sea Level and Projections](https://tidesandcurrents.noaa.gov/sltrends/plots/scenario/8771450.png){width=100%}
+:::
+::: {.column width="50%"}
+What separates the scenarios?
+To first order:
+
+1. How much $CO_2$ we emit
+1. How much the climate system warms in response to $CO_2$ (*climate sensitivity*)
+1. Ice sheet response to temperatures
+
+:::
+::::
+
+## Learn more
+
+1. Visit [dossgollin-lab.github.io](https://dossgollin-lab.github.io)
+1. Take CEVE 421
+1. Take CEVE 443 (coming soon)
+1. [jdossgollin@rice.edu](mailto:jdossgollin@rice.edu)
+
+## References

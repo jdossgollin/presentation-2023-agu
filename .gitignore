@@ -1,0 +1,6 @@
+/.quarto/
+_site/
+index-listing.json
+_site_libs/
+/.luarc.json
+_pdf/

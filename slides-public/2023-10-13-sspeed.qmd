@@ -1,0 +1,299 @@
+---
+title: "A Spatiotemporal Hierarchical Bayesian Model for Nonstationary Intensity-Duration-Frequency Curves"
+author: "James Doss-Gollin"
+date: 2023-10-13
+format:
+    revealjs:
+        theme: [default, ../_assets/sass/slides.scss]
+---
+
+## Teamwork Makes the Dream Work {.smaller}
+
+::::: {.columns}
+:::: {.column width="10%"}
+::::
+:::: {.column width="80%"}
+::: {layout-ncol=4 layout-valign="top"}
+
+![Yuchen Lu (Rice)](../_assets/img/people/yuchenlu.jpg)
+
+![John Nielsen-Gammon (TAMU)](../_assets/img/people/nielsen-gammon.jpg)
+
+![Rewati Niraula (TWDB)](../_assets/img/people/rewati-niraula.jpg)
+
+![Benjamin Seiyon Lee (GMU)](../_assets/img/people/seiyon-lee.jpg)
+
+:::
+::::
+
+:::: {.column width="40%"}
+Slides: [{{< var url-short >}}]({{< var url >}})
+::::
+:::: {.column width="20%"}
+::::
+:::: {.column width="40%"}
+::: {layout-ncol=2 layout-valign="center"}
+
+![](../_assets/img/logos/twdb.png)
+
+![](../_assets/img/logos/Rice_Logo_280_Blue.svg)
+
+:::
+::::
+:::: {.column width="30%"}
+::::
+
+:::::
+
+
+# Motivation
+
+## Heavy rainfall: Texas and 🌎 {.smaller}
+
+::::: {.columns}
+:::: {.column width="5%"}
+::::
+:::: {.column width="90%"}
+::: {layout-ncol=4}
+
+![Mesquite, TX, 2022](https://media.npr.org/assets/img/2022/08/22/ap22234695884313-c1c82ee563b42ff28034be4a371acb099ae88c9a-s1600-c85.webp)
+
+![Houston, 2017](https://cdn.vox-cdn.com/thumbor/TUffMXPQKxnxsmL3GrhbWItAEBw=/0x0:3000x2000/1820x1213/filters:focal(1260x760:1740x1240):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/56417707/840239148.0.jpg)
+
+![Magnolia, TX, 2016](https://static01.nyt.com/images/2016/05/30/us/31xp-FLOODING/31xp-FLOODING-superJumbo.jpg?quality=75&auto=webp)
+
+![Houston, 2016](https://s.hdnux.com/photos/64/02/43/13641980/4/rawImage.jpg)
+
+![Hong Kong, 2023](https://static01.nyt.com/images/2023/09/08/multimedia/08china-flood-cmtl/08china-flood-cmtl-superJumbo.jpg?quality=75&auto=webp)
+
+![Montpelier, VT, 2023](https://static01.nyt.com/images/2023/07/11/multimedia/11flooding-vt-motorists2-zbwv/11flooding-vt-motorists2-zbwv-superJumbo.jpg?quality=75&auto=webp)
+
+![Santa Catarina, Brazil, 2022](https://www.reuters.com/resizer/1EPd9mEizuzIRaar70Sisbsbntc=/1920x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/4F23LASZIJMR7MEK3N7H2TJETM.jpg)
+
+![Zhengzhou, China, 2021](https://i0.wp.com/yaleclimateconnections.org/wp-content/uploads/2021/07/0721_Zhengzhou-flood_1600.jpg?w=1600&ssl=1)
+
+:::
+::::
+:::: {.column width="5%"}
+::::
+:::::
+
+## IDF curves are widely used
+
+::::: {.columns}
+:::: {.column width=5%}
+::::
+:::: {.column width=90%}
+::: {layout-ncol=2 layout-valign="center"}
+
+![](https://s.hdnux.com/photos/01/33/37/34/23983935/5/1200x0.jpg)
+
+![](https://cdn.vox-cdn.com/uploads/chorus_asset/file/9123517/Screen_Shot_2017_08_27_at_1.21.15_PM.png)
+
+:::
+::::
+:::: {.column width=5%}
+::::
+:::::
+
+
+## Existing guidance leaves gaps {.smaller}
+
+:::: {.columns}
+::: {.column width="45%"}
+
+![](../_assets/img/meme/fight-idf.png){width=100%}
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="50%"}
+
+| Approach | Drawback | 
+| -------- | -------- |
+| Stationarity | Accounting for climate change |
+| Point estimate then interpolate | Uncertainty quantification / characterization | 
+| Separate estimate for each duration | Physically inconsistent, high uncertainty | 
+| Use gauges w/ long record only | Integrate newer gauges (e.g., mesonets) | 
+
+::: {.fragment .fade-in}
+::: {.callout-important}
+## Key insight
+
+These limitations are most evident at short durations, where the largest changes are anticipated
+:::
+:::
+:::
+::::
+
+## So what to do?
+
+![](../_assets/img/meme/gnome-nonstationarity.jpg){ style="display: block; margin: 0 auto;" }
+
+
+# Conceptual Framework
+
+## Nonstationary extreme value models
+
+Generic nonstationary model for annual maximum precipitation:
+$$
+y(\vb{s}, t) \sim \text{GEV} (\mu(\vb{s}, t), \sigma(\vb{s}, t), \xi(\vb{s}, t))
+$$
+
+::: {.fragment .fade-in}
+**Process-informed** models condition parameters on climate indices $\vb{X}(t)$ and spatial feature $\vb{Z}(\vb{s})$ [@schlef_idf:2023;@cheng_nonstationary:2014;@salas_review:2018]
+$$
+\mu(\vb{s}, t) = \beta(\vb{s}) \times \vb{X}(t) + \alpha \times \vb{Z}(\vb{s})
+$$
+:::
+
+::: {.fragment .fade-in}
+*(optional):* same for $\sigma(\vb{s}, t)$ and $\xi(\vb{s}, t)$
+:::
+
+## Estimation uncertainty {.smaller}
+
+::::: {.columns}
+:::: {.column width="50%"}
+
+![@fagnant_spatiotemporal:2020](../_assets/img/external-papers/fagnant-spatiotemporal-2020-5.jpeg){height=4.5in}
+
+::::
+:::: {.column width="50%"}
+::: {.fragment .fade-in}
+![@serinaldi_undead:2015](../_assets/img/external-papers/serinaldi-undead-2015-4.jpg){height=4.5in}
+:::
+::::
+:::::
+
+::: {.notes}
+- By definition, few extremes
+- Parametric uncertainty
+- Sampling uncertainty
+- Model structure uncertainty
+:::
+
+## Estimates matter for design & cost
+
+![@sharma_stormwater:2021: Ellicott City, MD](../_assets/img/external-papers/sharma-2021-fig-4a.png){ style="display: block; margin: 0 auto;" }
+
+# Case study
+
+## Data
+
+| Today | Ongoing TAMU/TWDB project |
+| ----- | ------- |
+| NOAA GHCN | Extended Atlas-14 and more |
+| Daily | Multiple durations |
+| Only stations w/ long record | Integrate newer gauges (e.g., mesonets) |
+
+## Statistical framework
+
+Bayesian hierarichal space-time model (*"Spatially Varying Covariates"*):
+$$
+\text{Extreme Value Theory} \quad \times \quad \text{Gaussian Processes}
+$$
+
+::: {.fragment  .smaller}
+:::: {.columns}
+::: {.column width="50%"}
+1. Handle varying gauge lengths
+1. Quantify uncertainty in estimates
+1. Assumption: robust effects of climate covariates on the probability distribution of heavy rainfall are heterogeneous in space and time
+:::
+::: {.column width="50%"}
+![](https://www.researchgate.net/publication/327613136/figure/fig1/AS:749406701776896@1555683889137/Illustration-of-Gaussian-process-regression-in-one-dimension-for-the-target-test.png){width=100%}
+:::
+::::
+:::
+
+## Flexible inference
+
+We can calculate this map for past, current, or projected global $\text{CO}_2$ concentrations
+
+![100 year RL for daily precipitation, 2021](../_assets/img/lu-2023/2023-10-12-map-rl-100-2021){width=100%}
+
+## Robust changes in precipitation frequency
+
+![Change in 100 year return level for daily precipitation, 1940-2021](../_assets/img/lu-2023/2023-10-12-map-delta-rl-100-2021.png){width=100%}
+
+## Proabilistic
+
+Fully probabilistic projections at any ungauged location, with uncertainty quantification built-in
+
+![Return Plot for Daily Rainfall at Rice University (ungauged, has nearby stations)](../_assets/img/lu-2023/2023-10-12-return-plot-rice.png){width=100%}
+
+
+# Ongoing work
+
+## Parametric duration dependence {.smaller}
+
+Adding a few parameters, we explicitly and flexibly model the GEV parameters as a function of duration $d$ [@ulrich_idf:2020; @koutsoyiannis_idf:1998; @fauer_idf:2021]:
+$$
+\begin{aligned}
+\sigma (d) &=  \sigma_0 (d + \theta) ^ {\eta_1 + \eta_2 }  + \tau \\
+\mu (d) &= \tilde{\mu} (\sigma_0 (d + \theta ) ^ {-\eta_1 }  + \tau)
+\end{aligned}
+$$
+
+![@fauer_idf:2021](../_assets/img/external-papers/fauer-idf-2021-2.png){height=3.5in}
+
+## Integrate climate model simulations {.smaller}
+
+Climate model simulations provide *valuable insights*, but precipitation is *averaged* in time and space and represented with substantial *biases*.
+
+::: {layout-ncol="2"}
+
+::: {.fragment .fade-in}
+Traditional approaches **use climate models directly** to
+
+1. Downscale and bias correct daily/hourly output, then estimate IDF curves
+1. Estimate IDF curves from climate models, then bias correct
+
+Many bias correction pitfalls [see, e.g., @ehret_biascorrection:2012;@lafferty_downscaling:2023]
+:::
+
+::: {.fragment .fade-in}
+We use **use climate models indirectly** to "play to their strengths":
+
+1. Project climate indices
+1. Constrain spatial parameters
+1. Inform duration dependence
+:::
+:::
+
+# Conclusions
+
+## Science to action
+
+- Next-generation precipitation frequency grids for Texas
+    - TWDB funded project
+    - TAMU (lead) and Rice
+- Hope to contribute tools and knowledge to NOAA Atlas 15 efforts [@noaa_nonstationary:2022]
+
+## Summary
+
+::: {.incremental}
+1. Probabilistic and flexible approach for nonstationary extreme value analysis
+1. Robust estimates
+1. Natural pathway to integrate climate models, duration dependence, and more
+:::
+
+[dossgollin-lab.github.io](https://dossgollin-lab.github.io)
+
+:::: {.columns}
+::: {.column width=30%}
+:::
+::: {.column width=40%}
+::: {layout-ncol=2 layout-valign="center"}
+![](../_assets/img/logos/twdb.png)
+
+![](../_assets/img/logos/Rice_Logo_280_Blue.svg)
+:::
+:::
+::: {.column width=30%}
+:::
+::::
+
+
+## References {.smaller .scrollable}

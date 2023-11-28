@@ -1,0 +1,16 @@
+---
+title: "James Doss-Gollin's Public Presentations"
+format: html
+listing:
+  contents: slides-public
+  type: table
+  sort: "date desc"
+---
+
+This is an experimental website for hosting my public presentations, and as such this homepage is a work in progress.
+Thanks for your patience!
+
+For more about my work, please see:
+
+- [Doss-Gollin Lab](https://doss-gollin-lab.github.io){target="_blank"}
+- My [personal website](https://jdossgollin.github.io){target="_blank"}
