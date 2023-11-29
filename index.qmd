@@ -112,7 +112,7 @@ Mark Wolfe/FEMA News
 ::::
 :::::
 
------
+## {data-menu-title="Climate is changing but randomness challenges trend estimation"}
 
 ::::: {.columns text-valign="center"}
 :::: {.column width="70%"}
@@ -127,12 +127,27 @@ Mark Wolfe/FEMA News
 ::::
 :::::
 
------
+## {data-menu-title="Just use ESMs?" background-image="_assets/img/esm-schematic.png" background-opacity="0.3" background-size="contain"}
+
+### JUST USE ESMS? {.text-indigo-pink style="font-size: 2.75em;"}
+
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
+[Drizzling bias]{.hl .hl-gold} and scale mismatch make statistical methods unavoidable
+:::
+
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
+Can bias correction fix [dynamical limitations]{.hl .hl-gold}?
+:::
+
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
+Despite limitations, ESMs do provide [useful information]{.hl .hl-gold}
+:::
+
+## {data-menu-title="Nonstationary models need more parameters"}
 
 ### NONSTATIONARY MODELS {.text-wash-red style="font-size: 1.6em;"}
 
 ####  NEED MORE PARAMETERS {.text-wash-pink style="font-size: 1.3em; margin-left: 50px;"}
-
 
 ::: {.fragment .fade-in}
 Generic nonstationary model for annual maximum precipitation:
@@ -186,9 +201,7 @@ for $\theta \in \{\mu, \sigma, \xi \}$
 :::
 ::::
 
-## CLIMATE CHANGE DRIVES LARGER AND MORE VARIABLE EXTREMES
-
-Show only the increasing trends here:
+## POSITIVE TRENDS FOR MOST OF TEXAS {.text-indigo-pink}
 
 ![](_assets/img/lu-2023/2023-11-09/map_difference.png)
 
@@ -216,6 +229,9 @@ Show only the increasing trends here:
 :::
 :::{.fragment .fade-in fragment-index=4}
 **✅ Well-calibrated**
+:::
+:::{.fragment .fade-in fragment-index=4}
+**✅ Plausibly model trends into medium future**
 :::
 :::{.fragment .fade-in fragment-index=5}
 **❌ Overcome sampling variability**

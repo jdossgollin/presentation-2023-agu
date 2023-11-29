@@ -8,8 +8,8 @@ project:
 
 website:
   page-navigation: false
-  title: "James Doss-Gollin's Presentations"
-  description: "James Doss-Gollin's Presentations"
+  title: "Nonstationary Rainfall Frequency Estimates for Texas"
+  description: "James Doss-Gollin's Presentation at AGU 2023 Fall Meeting"
   site-url: https://jdossgollin.github.io/presentation-2023-agu
   repo-url: https://www.github.com/jdossgollin/presentation-2023-agu
   repo-actions: [edit, issue]
