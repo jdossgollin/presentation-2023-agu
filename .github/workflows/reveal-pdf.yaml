@@ -22,8 +22,16 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
       
-      - name: Render Quarto Project
+      - name: Render Book project
         uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: revealjs
+      
+      - name: Publish HTML book
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
 
       - name: Create "/slides" directory
         run: mkdir slides && sudo chmod 777 slides
