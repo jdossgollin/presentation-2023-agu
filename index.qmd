@@ -4,6 +4,7 @@ format:
     self-contained: true
 
     width: 1400
+    height: 788
     theme: [default, _assets/sass/slides.scss]
     standalone: true
     
@@ -27,14 +28,9 @@ format:
     pdf-separate-fragments: true    
 
     html-math-method: mathjax
-    include-in-header: _assets/html/mathjax-config.html
 ---
 
-## {.center background-image="_assets/img/martinez-harvey.JPG" background-opacity="0.3" }
-
-::: {.notes}
-Hi, I'm James
-:::
+## {data-menu-title="Title?" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.3"}
 
 <h1 class="text-indigo-pink">Nonstationary Rainfall Frequency Estimates for Texas<h1>
 
@@ -127,7 +123,7 @@ Mark Wolfe/FEMA News
 ::::
 :::::
 
-## {data-menu-title="Just use ESMs?" background-image="_assets/img/esm-schematic.png" background-opacity="0.3" background-size="contain"}
+## {data-menu-title="Just use ESMs?" background-image="_assets/img/esm-schematic.png" background-opacity="0.3"}
 
 ### JUST USE ESMS? {.text-indigo-pink style="font-size: 2.75em;"}
 
@@ -152,14 +148,14 @@ Despite limitations, ESMs do provide [useful information]{.hl .hl-gold}
 ::: {.fragment .fade-in}
 Generic nonstationary model for annual maximum precipitation:
 $$
-y(\vb{s}, t) \sim \text{GEV} \left( \mu(\vb{s}, t), \sigma(\vb{s}, t), \xi(\vb{s}, t) \right)
+y(\mathbf{s}, t) \sim \text{GEV} \left( \mu(\mathbf{s}, t), \sigma(\mathbf{s}, t), \xi(\mathbf{s}, t) \right)
 $$
 :::
 
 ::: {.fragment .fade-in}
-**Process-informed** models condition parameters on climate indices $\vb{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
+**Process-informed** models condition parameters on climate indices $\mathbf{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
 $$
-\theta(\vb{s}, t) = \alpha + \overbrace{\beta(\vb{s})}^\text{more params} \times \overbrace{\vb{X}(t)}^\text{climate}
+\theta(\mathbf{s}, t) = \alpha + \overbrace{\beta(\mathbf{s})}^\text{more params} \times \overbrace{\mathbf{X}(t)}^\text{climate}
 $$
 for $\theta \in \{\mu, \sigma, \xi \}$
 :::
@@ -230,10 +226,10 @@ for $\theta \in \{\mu, \sigma, \xi \}$
 :::{.fragment .fade-in fragment-index=4}
 **✅ Well-calibrated**
 :::
-:::{.fragment .fade-in fragment-index=4}
+:::{.fragment .fade-in fragment-index=5}
 **✅ Plausibly model trends into medium future**
 :::
-:::{.fragment .fade-in fragment-index=5}
+:::{.fragment .fade-in fragment-index=6}
 **❌ Overcome sampling variability**
 :::
 :::
@@ -242,7 +238,3 @@ for $\theta \in \{\mu, \sigma, \xi \}$
 
 :::{#refs}
 :::
-
-## Limitations of Climate Models
-
-## 

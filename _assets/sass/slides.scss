@@ -3,12 +3,10 @@
 
 /*-- scss:defaults --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
-@import url('_assets/font/CascadiaCodePL.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@400;700;900&display=swap');
 
 $font-family-sans-serif: "Inter", Helvetica, sans-serif !default;
-$font-family-monospace: "Cascadia Code PL", monospace !default;
+$font-family-monospace: "Fira Mono", monospace !default;
 
 // $body-bg: hsl(176, 94%, 94%);
 $body-bg: white;
@@ -39,16 +37,15 @@ $theme-black: #050505;
 }
 
 // noise effect for text
-@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 3) {
-    filter: contrast(200%) url('data:image/svg+xml,\
-    <svg xmlns="http://www.w3.org/2000/svg">\
-      <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
-        <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
-        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
-      </filter>\
-    </svg>#filter');
-}
-
+//@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 3) {
+//   filter: contrast(200%) url('data:image/svg+xml,\
+//    <svg xmlns="http://www.w3.org/2000/svg">\
+//      <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
+//        <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
+//        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
+//      </filter>\
+//    </svg>#filter');
+//}
 
 h1,
 h2,
@@ -255,7 +252,7 @@ h6 {
     h6 {
         // background-image: url("/images/chalk2.jpg");
         // background-size: 500px;
-        @include scratched();
+        //@include scratched();
         // color: $theme-white;
     }
 
@@ -311,27 +308,4 @@ h6 {
 .reveal pre.sourceCode code {
     background: linear-gradient(66deg, #bbeeee, #0088dd);
     padding: 12px 18px;
-}
-
-// see https://github.com/andrie/reveal-auto-agenda
-.agenda-heading {
-    font-size: 1.8em;
-    color: $theme-purple;
-    text-transform: uppercase;
-    @include scratched();
-}
-
-.agenda-inactive {
-    opacity: 0.45;
-    margin-top: -0.5em;
-    margin-bottom: -0.5em;
-    color: $theme-darkblue;
-    font-size: 1.3em;
-}
-
-.agenda-active {
-    margin-top: -0.5em;
-    margin-bottom: -0.5em;
-    color: $theme-darkblue;
-    font-size: 1.3em;
 }
