@@ -15,6 +15,7 @@ $headings-color: transparent !default; // because we're texturing them
 $link-color: #42affa;
 
 $theme-red: #ff0000b3;
+$theme-green: #34b233;
 $theme-orange: #cc6600aa;
 $theme-yellow: #ff9900aa;
 $theme-seafoam: #00aa6699;
@@ -37,15 +38,15 @@ $theme-black: #050505;
 }
 
 // noise effect for text
-//@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 3) {
-//   filter: contrast(200%) url('data:image/svg+xml,\
-//    <svg xmlns="http://www.w3.org/2000/svg">\
-//      <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
-//        <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
-//        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
-//      </filter>\
-//    </svg>#filter');
-//}
+@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 3) {
+    filter: contrast(200%) url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
+        <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
+      </filter>\
+    </svg>#filter');
+}
 
 h1,
 h2,
@@ -252,7 +253,7 @@ h6 {
     h6 {
         // background-image: url("/images/chalk2.jpg");
         // background-size: 500px;
-        //@include scratched();
+        @include scratched();
         // color: $theme-white;
     }
 

@@ -13,6 +13,7 @@ format:
     show-slide-number: all
     # page layout and transition
     center-title-slide: true
+    footer: \@jdossgollin
 
     transition: none
     toc: false
@@ -58,7 +59,7 @@ format:
 
 ::::: {.columns}
 :::: {.column width="40%"}
-#### for better or for worse... {.text-wash-red style="font-size: 0.5em;"}
+#### ...for better or for worse, {.text-wash-red style="font-size: 0.5em;"}
 
 ### IDF CURVES UNDERPIN RISK ASSESSMENT {.text-wash-red style="margin-top:25px; font-size: 1.6em;"}
 
@@ -68,15 +69,15 @@ format:
 ::: {.r-stack}
 ![](https://s.hdnux.com/photos/01/33/37/34/23983935/5/1200x0.jpg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(-5deg);"}
 
-![](_assets/img/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg)"}
+![](_assets/img/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg);"}
 
-![](_assets/img/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-1deg)"}
+![](_assets/img/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-1deg);"}
 
-![](_assets/img/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=4 style="transform:rotate(1deg)"}
+![](_assets/img/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=4 style="transform:rotate(1deg);"}
 :::
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out fragment-index=1"}
+::: {.fragment .fade-in-then-out fragment-index=1}
 [Houston Chronicle](https://www.houstonchronicle.com/news/houston-texas/houston/article/drainage-fund-shorted-build-houston-forward-18173571.php)
 :::
 ::: {.fragment .fade-in-then-out fragment-index=2"}
@@ -93,7 +94,7 @@ Mark Wolfe/FEMA News
 
 ::::: {.columns}
 :::: {.column width="40%"}
-### EXISTING GUIDANCE LEAVES GAPS {.text-orange-gold style="margin-top:150px; font-size: 2em;"}
+### EXISTING GUIDANCE LEAVES GAPS {.text-wash-orange style="margin-top:150px; font-size: 2em;"}
 ::::
 :::: {.column width="60%"}
 ::: {.r-stack}
@@ -108,14 +109,14 @@ Mark Wolfe/FEMA News
 ::::
 :::::
 
-## {data-menu-title="Climate is changing but randomness challenges trend estimation"}
+## {data-menu-title="Climate is changing but sampling variability challenges trend estimation"}
 
 ::::: {.columns text-valign="center"}
 :::: {.column width="70%"}
 ![](_assets/img/fagnant-spatiotemporal-2020-5.jpeg){width="100%"}
 ::::
 :::: {.column width="30%"}
-### CLIMATE IS CHANGING BUT RANDOMNESS CHALLENGES TREND ESTIMATION {.text-indigo-pink style="font-size:1.35em; margin-top: 50px; text-align: center;"}
+### CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #ff9900"} CHALLENGES TREND ESTIMATION {.text-wash-pink style="font-size:1.35em; margin-top: 50px; text-align: left;"}
 
 ::: {style="margin-top: 150px; font-size: 0.5em;"}
 @fagnant_spatiotemporal:2020: each line is a gauge from the same $5^\circ \times 3^\circ$ region
@@ -127,16 +128,14 @@ Mark Wolfe/FEMA News
 
 ### JUST USE ESMS? {.text-indigo-pink style="font-size: 2.75em;"}
 
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
-[Drizzling bias]{.hl .hl-gold} and scale mismatch make statistical methods unavoidable
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Sample many realizations of weather to overcome sampling variability
 :::
-
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
-Can bias correction fix [dynamical limitations]{.hl .hl-gold}?
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Physically constrained; better extrapolate to future climates
 :::
-
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 40px;"}
-Despite limitations, ESMs do provide [useful information]{.hl .hl-gold}
+::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
+[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} sampling variability is back in the picture!]{.fragment}
 :::
 
 ## {data-menu-title="Nonstationary models need more parameters"}
@@ -153,11 +152,10 @@ $$
 :::
 
 ::: {.fragment .fade-in}
-**Process-informed** models condition parameters on climate indices $\mathbf{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
+Process-informed models condition parameters on climate indices $\mathbf{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
 $$
-\theta(\mathbf{s}, t) = \alpha + \overbrace{\beta(\mathbf{s})}^\text{more params} \times \overbrace{\mathbf{X}(t)}^\text{climate}
+\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta(\mathbf{s}) \mathbf{X}(t)}_{\text{nonstationarity model}\atop\text{more parameters}}
 $$
-for $\theta \in \{\mu, \sigma, \xi \}$
 :::
 
 ## {data-menu-title="Nonstationary models increase estimation uncertainty"}
@@ -168,8 +166,8 @@ for $\theta \in \{\mu, \sigma, \xi \}$
 
 ![](_assets/img/serinaldi-undead-2015-4ab.jpg){height=5.5in}
 
-:::{style="font-size: 0.5em; text-align: center;"}
-@serinaldi_undead:2015: more parameters, same data ➡️ posterior uncertainty 📈
+:::{style="font-size: 0.75em; text-align: center;"}
+@serinaldi_undead:2015: more parameters, same data {{< fa arrow-right-long >}} more uncertainty
 :::
 
 ##  TWDB-FUNDED RICE-TAMU COLLAB {.text-indigo-pink}
@@ -205,32 +203,32 @@ for $\theta \in \{\mu, \sigma, \xi \}$
 
 ![](_assets/img/lu-2023/2023-11-09/map_difference.png)
 
-## DIAGNOSTICS SUGGEST EXTREME PROBABILITIES ARE WELL-CALIBRATED {style="font-size: 0.5em; "}
+## WELL-CALIBRATED EXTREME PROBABILITIES {style="font-size: 0.75em; "}
 
 ![](_assets/img/lu-2023/2023-11-09/quantiles.png){width="100%"}
 
-## {background="linear-gradient(45deg, #f37335, #fdc830)"}
+## {data-menu-title="Summary" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.3"}
 
 ### [SUMMARY]{.hl .hl-lime style="font-size: 2.25em;"}
 
-::: {style="font-size: 1.5em;"}
-**Bayesian space-time model:**
+::: {style="font-size: 1.4em;"}
+**Our Bayesian space-time model:**
 :::
-::: {style="font-size: 1.5em;  margin-left: 1em;"}
+::: {style="font-size: 1.4em;"}
+:::{.fragment .fade-in fragment-index=1}
+[{{< fa circle-check >}}]{style="color: #008000"} **Represents medium-term changes to extreme precipitation probabilities**
+:::
 :::{.fragment .fade-in fragment-index=2}
-**✅ Reduce estimation uncertainty**
+[{{< fa circle-check >}}]{style="color: #008000"} **Reduces estimation uncertainty**
 :::
 :::{.fragment .fade-in fragment-index=3}
-**✅ Explicitly spatial (free interpolation)**
+[{{< fa circle-check >}}]{style="color: #008000"} **Demonstrates well-calibrated inferences**
 :::
 :::{.fragment .fade-in fragment-index=4}
-**✅ Well-calibrated**
+[{{< fa circle-check >}}]{style="color: #008000"} **Explicitly spatial (free interpolation)**
 :::
 :::{.fragment .fade-in fragment-index=5}
-**✅ Plausibly model trends into medium future**
-:::
-:::{.fragment .fade-in fragment-index=6}
-**❌ Overcome sampling variability**
+[{{< fa circle-xmark >}}]{style="color: #ff0000b3"} **Overcomes sampling variability**
 :::
 :::
 
