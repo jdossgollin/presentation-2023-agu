@@ -2,78 +2,92 @@
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "Hi, I’m James\n\n\nNonstationary Rainfall Frequency Estimates for Texas\n\n\n@AGU 2023, NH14B-07\n\n\n\n\nJAMES DOSS-GOLLIN\nRice UniversityCivil & Environmental Engineering\n\n\n\nYuchen Lu (Rice)\nBenjamin Seiyon Lee (GMU)\nJohn Nielsen-Gammon (TAMU)\nRewati Niraula (TWDB)"
+    "text": "Nonstationary Rainfall Frequency Estimates for Texas\n\n\n@AGU 2023, NH14B-07\n\n\n\n\nJAMES DOSS-GOLLIN\nRice UniversityCivil & Environmental Engineering\n\n\n\nYuchen Lu (Rice)\nBenjamin Seiyon Lee (GMU)\nJohn Nielsen-Gammon (TAMU)\nRewati Niraula (TWDB)"
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "for better or for worse…\nIDF CURVES UNDERPIN RISK ASSESSMENT\n\n\n\n\n\n\n\n\n\n\nHouston Chronicle\n\n\nBates et al. (2021) fig. 8\n\n\nMark Wolfe/FEMA News"
+    "text": "…for better or for worse,\nIDF CURVES UNDERPIN RISK ASSESSMENT\n\n\n\n\n\n\n\n\n\n\nHouston Chronicle\n\n\nBates et al. (2021) fig. 8\n\n\nMark Wolfe/FEMA News"
   },
   {
     "objectID": "index.html#section-2",
     "href": "index.html#section-2",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
     "text": "EXISTING GUIDANCE LEAVES GAPS"
   },
   {
     "objectID": "index.html#section-3",
     "href": "index.html#section-3",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "NONSTATIONARY MODELS\nINCREASE ESTIMATION UNCERTAINTY\n\n\nSerinaldi & Kilsby (2015): more parameters, same data ➡️ posterior uncertainty 📈"
+    "text": "CLIMATE IS CHANGING BUT SAMPLING VARIABILITY CHALLENGES TREND ESTIMATION\n\nFagnant et al. (2020): each line is a gauge from the same \\(5^\\circ \\times 3^\\circ\\) region"
   },
   {
-    "objectID": "index.html#twdb-funded-rice-tamu-collab",
-    "href": "index.html#twdb-funded-rice-tamu-collab",
-    "title": "James Doss-Gollin's Presentations",
-    "section": "TWDB-FUNDED RICE-TAMU COLLAB",
-    "text": "TWDB-FUNDED RICE-TAMU COLLAB\n\n\nMORE/BETTER DATA\n\n\nWe use long-record gauges AND newer mesonets\n\n\n🤝\n\nSPATIALLY VARYING COVARIATES\n\n\nframework: Bayesian hierarchical model (flexible, probabilistic)\nhypothesis: parameters are smooth\nmodel: latent parameters as spatial fields (Moran basis functions)"
-  },
-  {
-    "objectID": "index.html#climate-change-drives-larger-and-more-variable-extremes",
-    "href": "index.html#climate-change-drives-larger-and-more-variable-extremes",
-    "title": "James Doss-Gollin's Presentations",
-    "section": "CLIMATE CHANGE DRIVES LARGER AND MORE VARIABLE EXTREMES",
-    "text": "CLIMATE CHANGE DRIVES LARGER AND MORE VARIABLE EXTREMES\nShow only the increasing trends here:"
-  },
-  {
-    "objectID": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
-    "href": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
-    "title": "James Doss-Gollin's Presentations",
-    "section": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS",
-    "text": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS"
-  },
-  {
-    "objectID": "index.html#diagnostics-suggest-extreme-probabilities-are-well-calibrated",
-    "href": "index.html#diagnostics-suggest-extreme-probabilities-are-well-calibrated",
-    "title": "James Doss-Gollin's Presentations",
-    "section": "DIAGNOSTICS SUGGEST EXTREME PROBABILITIES ARE WELL-CALIBRATED",
-    "text": "DIAGNOSTICS SUGGEST EXTREME PROBABILITIES ARE WELL-CALIBRATED"
+    "objectID": "index.html#section-4",
+    "href": "index.html#section-4",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "",
+    "text": "JUST USE ESMS?\n\n Sample many realizations of weather to overcome sampling variability\n\n\n Physically constrained; better extrapolate to future climates\n\n\n Drizzle bias and dynamical limitations motivate downscaling / bias correction  sampling variability is back in the picture!"
   },
   {
     "objectID": "index.html#section-5",
     "href": "index.html#section-5",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "SUMMARY\n\nBayesian space-time model:\n\n\n\n✅ Reduce estimation uncertainty\n\n\n✅ Explicitly spatial (free interpolation)\n\n\n✅ Well-calibrated\n\n\n❌ Overcome sampling variability"
+    "text": "NONSTATIONARY MODELS\nNEED MORE PARAMETERS\n\nGeneric nonstationary model for annual maximum precipitation: \\[\ny(\\mathbf{s}, t) \\sim \\text{GEV} \\left( \\mu(\\mathbf{s}, t), \\sigma(\\mathbf{s}, t), \\xi(\\mathbf{s}, t) \\right)\n\\]\n\n\nProcess-informed models condition parameters on climate indices \\(\\mathbf{X}(t)\\) (Cheng & AghaKouchak, 2014; Schlef et al., 2023) \\[\n\\theta(\\mathbf{s}, t) = \\alpha + \\underbrace{\\sum_{j=1}^J \\beta(\\mathbf{s}) \\mathbf{X}(t)}_{\\text{nonstationarity model}\\atop\\text{more parameters}}\n\\]"
+  },
+  {
+    "objectID": "index.html#section-6",
+    "href": "index.html#section-6",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "",
+    "text": "NONSTATIONARY MODELS\nINCREASE ESTIMATION UNCERTAINTY\n\n\nSerinaldi & Kilsby (2015): more parameters, same data  more uncertainty"
+  },
+  {
+    "objectID": "index.html#twdb-funded-rice-tamu-collab",
+    "href": "index.html#twdb-funded-rice-tamu-collab",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "TWDB-FUNDED RICE-TAMU COLLAB",
+    "text": "TWDB-FUNDED RICE-TAMU COLLAB\n\n\nMORE/BETTER DATA\n\n\nWe use long-record gauges AND newer mesonets\n\n\n🤝\n\nSPATIALLY VARYING COVARIATES\n\n\nframework: Bayesian hierarchical model (flexible, probabilistic)\nhypothesis: parameters are smooth\nmodel: latent parameters as spatial fields (Moran basis functions)"
+  },
+  {
+    "objectID": "index.html#positive-trends-for-most-of-texas",
+    "href": "index.html#positive-trends-for-most-of-texas",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "POSITIVE TRENDS FOR MOST OF TEXAS",
+    "text": "POSITIVE TRENDS FOR MOST OF TEXAS"
+  },
+  {
+    "objectID": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
+    "href": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS",
+    "text": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS"
+  },
+  {
+    "objectID": "index.html#well-calibrated-extreme-probabilities",
+    "href": "index.html#well-calibrated-extreme-probabilities",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "WELL-CALIBRATED EXTREME PROBABILITIES",
+    "text": "WELL-CALIBRATED EXTREME PROBABILITIES"
+  },
+  {
+    "objectID": "index.html#section-8",
+    "href": "index.html#section-8",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
+    "section": "",
+    "text": "SUMMARY\n\nOur Bayesian space-time model:\n\n\n\n Represents medium-term changes to extreme precipitation probabilities\n\n\n Reduces estimation uncertainty\n\n\n Demonstrates well-calibrated inferences\n\n\n Explicitly spatial (free interpolation)\n\n\n Overcomes sampling variability"
   },
   {
     "objectID": "index.html#references",
     "href": "index.html#references",
-    "title": "James Doss-Gollin's Presentations",
+    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "References",
-    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nCheng, L., & AghaKouchak, A. (2014). Nonstationary precipitation intensity-duration-frequency curves for infrastructure design in a changing climate. Scientific Reports, 4(1), 7093. https://doi.org/10.1038/srep07093\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nSchlef, K. E., Kunkel, K. E., Brown, C., Demissie, Y., Lettenmaier, D. P., Wagner, A., et al. (2023). Incorporating non-stationarity from climate change into rainfall frequency and intensity-duration-frequency (IDF) curves. Journal of Hydrology, 616, 128757. https://doi.org/10.1016/j.jhydrol.2022.128757\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013"
-  },
-  {
-    "objectID": "index.html#limitations-of-climate-models",
-    "href": "index.html#limitations-of-climate-models",
-    "title": "James Doss-Gollin's Presentations",
-    "section": "Limitations of Climate Models",
-    "text": "Limitations of Climate Models"
+    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nCheng, L., & AghaKouchak, A. (2014). Nonstationary precipitation intensity-duration-frequency curves for infrastructure design in a changing climate. Scientific Reports, 4(1), 7093. https://doi.org/10.1038/srep07093\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nSchlef, K. E., Kunkel, K. E., Brown, C., Demissie, Y., Lettenmaier, D. P., Wagner, A., et al. (2023). Incorporating non-stationarity from climate change into rainfall frequency and intensity-duration-frequency (IDF) curves. Journal of Hydrology, 616, 128757. https://doi.org/10.1016/j.jhydrol.2022.128757\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013\n\n\n\n\n@jdossgollin"
   }
 ]
