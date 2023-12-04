@@ -135,7 +135,7 @@ Mark Wolfe/FEMA News
 [{{< fa circle-plus >}}]{style="color: #008000"} Physically constrained; better extrapolate to future climates
 :::
 ::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
-[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} sampling variability is back in the picture!]{.fragment}
+[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} can't avoid sampling variability!]{.fragment}
 :::
 
 ## {data-menu-title="Nonstationary models need more parameters"}
@@ -154,7 +154,7 @@ $$
 ::: {.fragment .fade-in}
 Process-informed models condition parameters on climate indices $\mathbf{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
 $$
-\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta(\mathbf{s}) \mathbf{X}(t)}_{\text{nonstationarity model}\atop\text{more parameters}}
+\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta_j(\mathbf{s}) \mathbf{X}(t)}_{\text{parameters for}\atop\text{nonstationarity}}
 $$
 :::
 
@@ -178,7 +178,7 @@ $$
 ![](_assets/img/lu-2023/2023-11-09/all_stations_map.png){style="text-align: right;"}
 
 :::{style="font-size: 0.5em;"}
-*We use long-record gauges AND newer mesonets*
+*Long-record daily gauges, new mesonets, and more*
 :::
 :::
 ::: {.column width="5%"}

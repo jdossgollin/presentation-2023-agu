@@ -38,14 +38,14 @@ $theme-black: #050505;
 }
 
 // noise effect for text
-@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 3) {
+@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 5) {
     filter: contrast(200%) url('data:image/svg+xml,\
-    <svg xmlns="http://www.w3.org/2000/svg">\
-      <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
-        <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
-        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
-      </filter>\
-    </svg>#filter');
+      <svg xmlns="http://www.w3.org/2000/svg">\
+        <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
+          <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
+        </filter>\
+      </svg>#filter');
 }
 
 h1,
