@@ -5,29 +5,41 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@400;700;900&display=swap');
 
-$font-family-sans-serif: "Inter", Helvetica, sans-serif !default;
+$font-family-sans-serif: "Inter", sans-serif !default;
 $font-family-monospace: "Fira Mono", monospace !default;
 
-// $body-bg: hsl(176, 94%, 94%);
-$body-bg: white;
-$body-color: black;
-$headings-color: transparent !default; // because we're texturing them
-$link-color: #42affa;
+// Theme colors
+// https://brand.rice.edu/university-colors
+$rice-blue: #00205B;
+$rice-gray: #7C7E7F;
 
-$theme-red: #ff0000b3;
-$theme-green: #34b233;
-$theme-orange: #cc6600aa;
-$theme-yellow: #ff9900aa;
-$theme-seafoam: #00aa6699;
-$theme-emerald: #0077228f;
-$theme-lightblue: #0099ff99;
-$theme-darkblue: #0044ffa3;
-$theme-indigo: #4422ffaa;
-$theme-purple: #6611bbaa;
-$theme-pink: #ff0077aa;
-$theme-brown: #88440099;
-$theme-white: #ffffff;
-$theme-black: #050505;
+// Extended palette
+// https://brand.rice.edu/extended-palette
+$light-blue-gray: #ADC7DC;
+$light-gray: #E0E2E6;
+$bright-blue: #9FDDF9;
+$medium-blue: #4D9AD4;
+$rich-blue: #0A509E;
+$midnight-blue: #13133E;
+$dark-gray: #44474F;
+$dark-blue-gray: #303B61;
+
+// Campus-inspired palette
+// https://brand.rice.edu/campus-inspired-palette
+$warm-yellow: #E9A139;
+$brick-red: #C04829;
+$burgundy: #68132E;
+$shadow-purple: #362E52;
+$leaf-emerald: #005B50;
+$tree-green: #00432C;
+$grass-green: #359245;
+$bright-green: #A5C151;
+
+
+$body-bg: white;
+$body-color: $rice-blue;
+$headings-color: transparent !default; // because we're texturing them
+$link-color: $rice-gray;
 
 /*-- scss:rules --*/
 
@@ -56,56 +68,16 @@ h5,
 h6 {
 
     // slide headers
-    .reveal .text-wash-red & {
-        color: $theme-red
+    .reveal .text-brick-red & {
+        color: $brick-red
     }
 
-    .reveal .text-wash-orange & {
-        color: $theme-orange
+    .reveal .text-light-gray & {
+        color: $light-gray
     }
 
-    .reveal .text-wash-yellow & {
-        color: $theme-yellow
-    }
-
-    .reveal .text-wash-seafoam & {
-        color: $theme-seafoam
-    }
-
-    .reveal .text-wash-emerald & {
-        color: $theme-emerald
-    }
-
-    .reveal .text-wash-lightblue & {
-        color: $theme-lightblue
-    }
-
-    .reveal .text-wash-darkblue & {
-        color: $theme-darkblue
-    }
-
-    .reveal .text-wash-indigo & {
-        color: $theme-indigo
-    }
-
-    .reveal .text-wash-purple & {
-        color: $theme-purple
-    }
-
-    .reveal .text-wash-pink & {
-        color: $theme-pink
-    }
-
-    .reveal .text-wash-brown & {
-        color: $theme-brown
-    }
-
-    .reveal .text-wash-black & {
-        color: $theme-black
-    }
-
-    .reveal .text-wash-white & {
-        color: $theme-white
+    .reveal .text-midnight-blue & {
+        color: $midnight-blue
     }
 
     .reveal .text-lime-cyan & {
@@ -155,56 +127,16 @@ h6 {
         h6 {
 
             // other headers
-            &.text-wash-red {
-                color: $theme-red
+            &.text-brick-red {
+                color: $brick-red
             }
 
-            &.text-wash-orange {
-                color: $theme-orange
+            &.text-light-gray {
+                color: $light-gray
             }
 
-            &.text-wash-yellow {
-                color: $theme-yellow
-            }
-
-            &.text-wash-seafoam {
-                color: $theme-seafoam
-            }
-
-            &.text-wash-emerald {
-                color: $theme-emerald
-            }
-
-            &.text-wash-lightblue {
-                color: $theme-lightblue
-            }
-
-            &.text-wash-darkblue {
-                color: $theme-darkblue
-            }
-
-            &.text-wash-indigo {
-                color: $theme-indigo
-            }
-
-            &.text-wash-purple {
-                color: $theme-purple
-            }
-
-            &.text-wash-pink {
-                color: $theme-pink
-            }
-
-            &.text-wash-brown {
-                color: $theme-brown
-            }
-
-            &.text-wash-black {
-                color: $theme-black
-            }
-
-            &.text-wash-white {
-                color: $theme-white
+            &.text-midnight-blue {
+                color: $midnight-blue
             }
 
             &.text-lime-cyan {
@@ -245,18 +177,6 @@ h6 {
         }
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        // background-image: url("/images/chalk2.jpg");
-        // background-size: 500px;
-        @include scratched();
-        // color: $theme-white;
-    }
-
     // weird that they're inline-block by default?
     ol,
     ul {
@@ -280,22 +200,26 @@ h6 {
 .hl {
     padding-inline: 1rem;
     margin-inline: 1rem;
-    //background: #99999966;
+    background: #99999966;
 
-    &-purple {
-        background: #6a159e;
+    &-grass-green {
+        background: $grass-green;
     }
 
-    &-red {
-        background: #91002655;
+    &-brick-red {
+        background: $brick-red;
     }
 
-    &-gold {
-        background: orange;
+    &-rice-blue {
+        background: $rice-blue;
     }
 
-    &-lime {
-        background: #66dd00;
+    &-warm-yellow {
+        background: $warm-yellow;
+    }
+
+    &-light-gray {
+        background: $light-gray;
     }
 }
 

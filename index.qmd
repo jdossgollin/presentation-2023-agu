@@ -3,9 +3,9 @@ format:
   revealjs:
     self-contained: true
 
-    width: 1400
-    height: 788
-    theme: [default, _assets/sass/slides.scss]
+    width: 1600
+    height: 900
+    theme: [default, _assets/sass/theme-rice.scss]
     standalone: true
     
     # page numbering
@@ -31,29 +31,33 @@ format:
     html-math-method: mathjax
 ---
 
-## {data-menu-title="Title?" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.3"}
+## {data-menu-title="Title?" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.7"}
 
-<h1 class="text-indigo-pink">Nonstationary Rainfall Frequency Estimates for Texas<h1>
+::: {.text-light-gray style="font-size: 1.85em; margin-top: 150px;"}
+### [Nonstationary Precipitation]{.hl .hl-rice-blue} 
+### [Frequency Estimates for Texas]{.hl .hl-rice-blue}
+:::
 
-<h2>\@AGU 2023, NH14B-07</h2>
-
+::: {style="margin-top: 150px;"}
 ::: {.columns}
-::: {.column width="50%"}
-::: {style="margin-top:50px"}
-### JAMES DOSS-GOLLIN {.text-wash-red}
+::: {.column width="55%"}
+::: {.text-light-gray}
+### [JAMES DOSS-GOLLIN]{.hl .hl-rice-blue} 
+#### [Rice Civil & Environmental Engineering]{.hl .hl-rice-blue} 
+:::
+:::
+::: {.column width="45%"}
+::: {style="text-align: right;"}
+#### [Yuchen Lu (Rice)]{.hl .hl-brick-red} {.text-light-gray}
+#### [Benjamin Seiyon Lee (GMU)]{.hl .hl-brick-red} {.text-light-gray}
+#### [John Nielsen-Gammon (TAMU)]{.hl .hl-brick-red} {.text-light-gray}
+#### [Rewati Niraula (TWDB)]{.hl .hl-brick-red} {.text-light-gray}
+:::
+:::
+:::
+:::
 
-#### Rice University</br>Civil & Environmental Engineering {.text-wash-red}
-:::
-:::
-::: {.column width="50%"}
-::: {style="margin-top:50px"}
-#### Yuchen Lu (Rice) {.text-wash-brown}
-#### Benjamin Seiyon Lee (GMU) {.text-wash-brown}
-#### John Nielsen-Gammon (TAMU) {.text-wash-brown}
-#### Rewati Niraula (TWDB) {.text-wash-brown}
-:::
-:::
-:::
+#### [\@AGU 2023, NH14B-07]{.hl .hl-grass-green} {.text-light-gray style="margin-top: 50px; text-align: right;"}
 
 ##  {data-menu-title="IDF Curves are used for everything"}
 
@@ -67,24 +71,21 @@ format:
 ::::
 :::: {.column width="60%"}
 ::: {.r-stack}
-![](https://s.hdnux.com/photos/01/33/37/34/23983935/5/1200x0.jpg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(-5deg);"}
+![](_assets/img/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(1deg);"}
 
 ![](_assets/img/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg);"}
 
 ![](_assets/img/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-1deg);"}
-
-![](_assets/img/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=4 style="transform:rotate(1deg);"}
 :::
 ::: {.r-stack}
-
-::: {.fragment .fade-in-then-out fragment-index=1}
-[Houston Chronicle](https://www.houstonchronicle.com/news/houston-texas/houston/article/drainage-fund-shorted-build-houston-forward-18173571.php)
+::: {.fragment .fade-in-then-out fragment-index=1"}
+{{< fa camera-retro >}} James Doss-Gollin
 :::
 ::: {.fragment .fade-in-then-out fragment-index=2"}
 @bates_modeling:2021 fig. 8
 :::
 ::: {.fragment .fade-in-then-out fragment-index=3"}
-Mark Wolfe/FEMA News
+{{< fa camera-retro >}} Mark Wolfe/FEMA News
 :::
 :::
 ::::
@@ -116,7 +117,7 @@ Mark Wolfe/FEMA News
 ![](_assets/img/fagnant-spatiotemporal-2020-5.jpeg){width="100%"}
 ::::
 :::: {.column width="30%"}
-### CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #ff9900"} CHALLENGES TREND ESTIMATION {.text-wash-pink style="font-size:1.35em; margin-top: 50px; text-align: left;"}
+### THE CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #E9A139"} CHALLENGES TREND ESTIMATION {.text-wash-pink style="font-size:1.35em; margin-top: 50px; text-align: left;"}
 
 ::: {style="margin-top: 150px; font-size: 0.5em;"}
 @fagnant_spatiotemporal:2020: each line is a gauge from the same $5^\circ \times 3^\circ$ region
@@ -126,23 +127,23 @@ Mark Wolfe/FEMA News
 
 ## {data-menu-title="Just use ESMs?" background-image="_assets/img/esm-schematic.png" background-opacity="0.3"}
 
-### JUST USE ESMS? {.text-indigo-pink style="font-size: 2.75em;"}
+### LET'S JUST USE ESMS? {style="font-size: 2.75em;"}
 
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
-[{{< fa circle-plus >}}]{style="color: #008000"} Sample many realizations of weather to overcome sampling variability
+::: {.fragment .fade-in style="font-size: 2em; margin-top: 120px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Better sample weather given climate
 :::
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
-[{{< fa circle-plus >}}]{style="color: #008000"} Physically constrained; better extrapolate to future climates
+::: {.fragment .fade-in style="font-size: 2em; margin-top: 20px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Physical constraints improve projection
 :::
-::: {.fragment .fade-in style="font-size: 1.5em; margin-top: 20px;"}
-[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} can't avoid sampling variability!]{.fragment}
+::: {.fragment .fade-in style="font-size: 2em; margin-top: 20px;"}
+[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} **still need a statistical model!**]{.fragment style="color: #ff0000b3"}
 :::
 
 ## {data-menu-title="Nonstationary models need more parameters"}
 
-### NONSTATIONARY MODELS {.text-wash-red style="font-size: 1.6em;"}
+### NONSTATIONARY MODELS {style="font-size: 2.25em;"}
 
-####  NEED MORE PARAMETERS {.text-wash-pink style="font-size: 1.3em; margin-left: 50px;"}
+####  NEED MORE PARAMETERS {.text-brick-red style="font-size: 1.75em; margin-left: 50px;"}
 
 ::: {.fragment .fade-in}
 Generic nonstationary model for annual maximum precipitation:
@@ -152,42 +153,36 @@ $$
 :::
 
 ::: {.fragment .fade-in}
-Process-informed models condition parameters on climate indices $\mathbf{X}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
+Process-informed models condition parameters on climate indices $\mathbf{x}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
 $$
-\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta_j(\mathbf{s}) \mathbf{X}(t)}_{\text{parameters for}\atop\text{nonstationarity}}
+\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta_j(\mathbf{s}) x_j(t)}_\text{additional parameters}
 $$
 :::
 
 ## {data-menu-title="Nonstationary models increase estimation uncertainty"}
 
-### NONSTATIONARY MODELS {.text-wash-red style="font-size: 1.6em;"}
+### NONSTATIONARY MODELS {style="font-size: 2.25em;"}
 
-#### INCREASE ESTIMATION UNCERTAINTY {.text-wash-pink style="font-size: 1.3em; margin-left: 50px;"}
+####  INCREASE ESTIMATION UNCERTAINTY {.text-brick-red style="font-size: 1.75em; margin-left: 50px;"}
 
 ![](_assets/img/serinaldi-undead-2015-4ab.jpg){height=5.5in}
 
-:::{style="font-size: 0.75em; text-align: center;"}
-@serinaldi_undead:2015: more parameters, same data {{< fa arrow-right-long >}} more uncertainty
-:::
+More parameters, same data {{< fa arrow-right-long >}} more uncertainty [@serinaldi_undead:2015]
 
-##  TWDB-FUNDED RICE-TAMU COLLAB {.text-indigo-pink}
+## [BETTER DATA 🤝 BETTER STATS]{style="font-size: 1.6em;"}
 
 :::: {.columns}
 ::: {.column width="55%"}
-#### MORE/BETTER DATA {.text-wash-red style="text-align: right;"}
-![](_assets/img/lu-2023/2023-11-09/all_stations_map.png){style="text-align: right;"}
+
+_insert here: map of gauges used_
 
 :::{style="font-size: 0.5em;"}
 *Long-record daily gauges, new mesonets, and more*
 :::
 :::
-::: {.column width="5%"}
-#### 🤝 {.text-wash-red}
-:::
-::: {.column width="40%"}
-#### SPATIALLY VARYING COVARIATES {.text-wash-red}
+::: {.column width="45%"}
 
-::: {.incremental}
+::: {.incremental style="font-size: 1.25em;"}
 - **framework:** Bayesian hierarchical model (flexible, probabilistic)
 - **hypothesis:** parameters are smooth
 - **model:** latent parameters as spatial fields (Moran basis functions)
@@ -203,33 +198,25 @@ $$
 
 ![](_assets/img/lu-2023/2023-11-09/map_difference.png)
 
-## WELL-CALIBRATED EXTREME PROBABILITIES {style="font-size: 0.75em; "}
-
-![](_assets/img/lu-2023/2023-11-09/quantiles.png){width="100%"}
+## [UNCERTAINTY {{< fa arrow-circle-down >}}; CALIBRATION {{< fa circle-check >}}]{style="font-size: 1.3em;"}
 
 ## {data-menu-title="Summary" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.3"}
 
-### [SUMMARY]{.hl .hl-lime style="font-size: 2.25em;"}
+### [Spatially Varying Covariates Model]{.hl .hl-rice-blue} {.text-light-gray style="font-size: 2.25em;"}
 
-::: {style="font-size: 1.4em;"}
-**Our Bayesian space-time model:**
-:::
-::: {style="font-size: 1.4em;"}
+::: {style="font-size: 1.6em; margin-top: 100px;"}
 :::{.fragment .fade-in fragment-index=1}
-[{{< fa circle-check >}}]{style="color: #008000"} **Represents medium-term changes to extreme precipitation probabilities**
+[{{< fa circle-check >}}]{style="color: #34b233"} **Estimates for ungauged locations & future years**
 :::
 :::{.fragment .fade-in fragment-index=2}
-[{{< fa circle-check >}}]{style="color: #008000"} **Reduces estimation uncertainty**
+[{{< fa circle-check >}}]{style="color: #34b233"} **Pool information to reduce uncertainty & improve calibration**
 :::
 :::{.fragment .fade-in fragment-index=3}
-[{{< fa circle-check >}}]{style="color: #008000"} **Demonstrates well-calibrated inferences**
+[{{< fa circle-xmark >}}]{style="color: #ff0000b3"} **Resolve sampling variability or deep uncertainties**
 :::
-:::{.fragment .fade-in fragment-index=4}
-[{{< fa circle-check >}}]{style="color: #008000"} **Explicitly spatial (free interpolation)**
 :::
-:::{.fragment .fade-in fragment-index=5}
-[{{< fa circle-xmark >}}]{style="color: #ff0000b3"} **Overcomes sampling variability**
-:::
+::: {.fragment .fade-in fragment-index=5 style="font-size: 0.9em; margin-top: 125px; color: #050505;"}
+[For more, see Yuchen Lu's poster H21T-1602 on Tuesday morning]{.hl .hl-light-gray}
 :::
 
 ## References {.smaller .scrollable}
