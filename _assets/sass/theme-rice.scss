@@ -38,7 +38,7 @@ $bright-green: #A5C151;
 
 $body-bg: white;
 $body-color: $rice-blue;
-$headings-color: transparent !default; // because we're texturing them
+$headings-color: $grass-green !default; // because we're texturing them
 $link-color: $rice-gray;
 
 /*-- scss:rules --*/
@@ -72,12 +72,24 @@ h6 {
         color: $brick-red
     }
 
+    .reveal .text-rice-gray & {
+        color: $rice-gray
+    }
+
     .reveal .text-light-gray & {
         color: $light-gray
     }
 
     .reveal .text-midnight-blue & {
         color: $midnight-blue
+    }
+
+    .reveal .text-grass-green {
+        color: $grass-green
+    }
+
+    .reveal .text-warm-yellow {
+        color: $warm-yellow
     }
 
     .reveal .text-lime-cyan & {
@@ -135,8 +147,20 @@ h6 {
                 color: $light-gray
             }
 
+            &.text-rice-gray {
+                color: $rice-gray
+            }
+
             &.text-midnight-blue {
                 color: $midnight-blue
+            }
+
+            &.text-grass-green {
+                color: $grass-green
+            }
+
+            &.text-warm-yellow {
+                color: $warm-yellow
             }
 
             &.text-lime-cyan {
@@ -199,6 +223,8 @@ h6 {
 
 .hl {
     padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-inline: 1rem;
     background: #99999966;
 

@@ -31,9 +31,9 @@ format:
     html-math-method: mathjax
 ---
 
-## {data-menu-title="Title?" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.7"}
+## {data-menu-title="Title?" background-image="_assets/img/external/martinez-harvey.jpeg" background-opacity="0.7"}
 
-::: {.text-light-gray style="font-size: 1.85em; margin-top: 150px;"}
+::: {.text-light-gray style="font-size: 70px; margin-top: 150px;"}
 ### [Nonstationary Precipitation]{.hl .hl-rice-blue} 
 ### [Frequency Estimates for Texas]{.hl .hl-rice-blue}
 :::
@@ -63,29 +63,29 @@ format:
 
 ::::: {.columns}
 :::: {.column width="40%"}
-#### ...for better or for worse, {.text-wash-red style="font-size: 0.5em;"}
+#### for better or for worse, {.text-rice-gray style="font-size: 24px;"}
 
-### IDF CURVES UNDERPIN RISK ASSESSMENT {.text-wash-red style="margin-top:25px; font-size: 1.6em;"}
+### IDF CURVES UNDERPIN RISK ASSESSMENT {.text-grass-green style="margin-top:25px; font-size: 70px;"}
 
-![](_assets/img/idf.png)
+![](_assets/img/external/idf.png)
 ::::
 :::: {.column width="60%"}
 ::: {.r-stack}
-![](_assets/img/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(1deg);"}
+![](_assets/img/external/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(1deg);"}
 
-![](_assets/img/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg);"}
+![](_assets/img/external/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg);"}
 
-![](_assets/img/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-1deg);"}
+![](_assets/img/external/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-1deg);"}
 :::
-::: {.r-stack}
+::: {.r-stack style="font-size: 24px;"}
 ::: {.fragment .fade-in-then-out fragment-index=1"}
-{{< fa camera-retro >}} James Doss-Gollin
+#### {{< fa camera-retro >}} James Doss-Gollin {.text-rice-gray}
 :::
 ::: {.fragment .fade-in-then-out fragment-index=2"}
-@bates_modeling:2021 fig. 8
+#### @bates_modeling:2021 fig. 8 {.text-rice-gray}
 :::
 ::: {.fragment .fade-in-then-out fragment-index=3"}
-{{< fa camera-retro >}} Mark Wolfe/FEMA News
+#### {{< fa camera-retro >}} Mark Wolfe/FEMA News {.text-rice-gray}
 :::
 :::
 ::::
@@ -95,7 +95,7 @@ format:
 
 ::::: {.columns}
 :::: {.column width="40%"}
-### EXISTING GUIDANCE LEAVES GAPS {.text-wash-orange style="margin-top:150px; font-size: 2em;"}
+### EXISTING GUIDANCE LEAVES GAPS {.text-grass-green style="margin-top:150px; font-size: 70px;"}
 ::::
 :::: {.column width="60%"}
 ::: {.r-stack}
@@ -113,109 +113,130 @@ format:
 ## {data-menu-title="Climate is changing but sampling variability challenges trend estimation"}
 
 ::::: {.columns text-valign="center"}
-:::: {.column width="70%"}
-![](_assets/img/fagnant-spatiotemporal-2020-5.jpeg){width="100%"}
+:::: {.column width="65%"}
+![](_assets/img/external/fagnant-spatiotemporal-2020-5.jpeg){width="100%"}
 ::::
-:::: {.column width="30%"}
-### THE CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #E9A139"} CHALLENGES TREND ESTIMATION {.text-wash-pink style="font-size:1.35em; margin-top: 50px; text-align: left;"}
+:::: {.column width="35%"}
+### THE CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #00205B;"} IMPEDES TREND ESTIMATION {.text-grass-green style="font-size:60px; margin-top: 75px; text-align: left;"}
 
-::: {style="margin-top: 150px; font-size: 0.5em;"}
-@fagnant_spatiotemporal:2020: each line is a gauge from the same $5^\circ \times 3^\circ$ region
+::: {style="font-size: 24px; color: #7C7E7F; margin-top: 150px;"}
+@fagnant_spatiotemporal:2020: Rolling window estimates of the 100 year return level. Each line shows a different gauge from the same $5^\circ \times 3^\circ$ region.
 :::
 ::::
 :::::
 
-## {data-menu-title="Just use ESMs?" background-image="_assets/img/esm-schematic.png" background-opacity="0.3"}
+## {data-menu-title="ESMs" background-image="_assets/img/external/esm-schematic.png" background-opacity="0.3"}
+### EARTH SYSTEM MODELS:  {.text-grass-green style="font-size: 80px;"}
 
-### LET'S JUST USE ESMS? {style="font-size: 2.75em;"}
-
-::: {.fragment .fade-in style="font-size: 2em; margin-top: 120px;"}
+::: {.fragment .fade-in style="font-size: 60px; margin-top: 100px;"}
 [{{< fa circle-plus >}}]{style="color: #008000"} Better sample weather given climate
 :::
-::: {.fragment .fade-in style="font-size: 2em; margin-top: 20px;"}
-[{{< fa circle-plus >}}]{style="color: #008000"} Physical constraints improve projection
+::: {.fragment .fade-in style="font-size: 60px; margin-top: 20px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Physical constraints improve extrapolation
 :::
-::: {.fragment .fade-in style="font-size: 2em; margin-top: 20px;"}
-[{{< fa circle-minus >}}]{style="color: #ff0000b3"} Drizzle bias and dynamical limitations motivate downscaling / bias correction [{{< fa arrow-circle-right >}} **still need a statistical model!**]{.fragment style="color: #ff0000b3"}
+::: {.fragment .fade-in style="font-size: 60px; margin-top: 20px;"}
+[{{< fa circle-minus >}}]{style="color: #ff0000b3"} **Limitations** (drizzle bias, dynamics, etc.) motivate bias correction
+:::
+::: {.fragment .fade-in style="font-size: 60px; margin-left: 60px; color: #ff0000b3;"}
+{{< fa arrow-circle-right >}} **still need a statistical model!**
 :::
 
-## {data-menu-title="Nonstationary models need more parameters"}
+---
 
-### NONSTATIONARY MODELS {style="font-size: 2.25em;"}
+### (EVEN WITH SOPHISTICATED TOOLS)  {.text-grass-green style="font-size: 80px;"}
+### {{< fa circle-question >}} do we capture extremes and their trends?  {.fragment .text-brick-red style="font-size: 60px; margin-left: 60px;"}
 
-####  NEED MORE PARAMETERS {.text-brick-red style="font-size: 1.75em; margin-left: 50px;"}
+![](_assets/img/results/liu-downscaling.png)
+
+::: {style="font-size: 24px; color: #7C7E7F;"}
+Yuhao Liu, Guha Balakrishnan, Ashok Veeraraghavan, & James Doss-Gollin (*in prep.*): computer vision-based downscaling.
+(T) low-resolution input, (M) high-resolution model output, and (B) ground truth for 8 time steps.
+:::
+
+---
+
+### NONSTATIONARY MODELS {.text-grass-green style="font-size: 80px;"}
+###  NEED MORE PARAMETERS {.text-rice-gray style="font-size: 60px; margin-left: 60px;"}
 
 ::: {.fragment .fade-in}
-Generic nonstationary model for annual maximum precipitation:
+Generic **nonstationary model** for annual maximum precipitation:
 $$
 y(\mathbf{s}, t) \sim \text{GEV} \left( \mu(\mathbf{s}, t), \sigma(\mathbf{s}, t), \xi(\mathbf{s}, t) \right)
 $$
 :::
 
 ::: {.fragment .fade-in}
-Process-informed models condition parameters on climate indices $\mathbf{x}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
+**Process-informed** models condition parameters on climate indices $\mathbf{x}(t)$ [@schlef_idf:2023;@cheng_nonstationary:2014]
 $$
 \theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta_j(\mathbf{s}) x_j(t)}_\text{additional parameters}
 $$
 :::
 
-## {data-menu-title="Nonstationary models increase estimation uncertainty"}
+---
 
-### NONSTATIONARY MODELS {style="font-size: 2.25em;"}
+### NONSTATIONARY MODELS {.text-grass-green style="font-size: 80px;"}
+###  INCREASE ESTIMATION UNCERTAINTY {.text-rice-gray style="font-size: 60px; margin-left: 60px;"}
 
-####  INCREASE ESTIMATION UNCERTAINTY {.text-brick-red style="font-size: 1.75em; margin-left: 50px;"}
+![](_assets/img/external/serinaldi-undead-2015-4ab.jpg){height=5.5in}
 
-![](_assets/img/serinaldi-undead-2015-4ab.jpg){height=5.5in}
-
+::: {style="font-size: 24px; color: #7C7E7F;"}
 More parameters, same data {{< fa arrow-right-long >}} more uncertainty [@serinaldi_undead:2015]
-
-## [BETTER DATA 🤝 BETTER STATS]{style="font-size: 1.6em;"}
-
-:::: {.columns}
-::: {.column width="55%"}
-
-_insert here: map of gauges used_
-
-:::{style="font-size: 0.5em;"}
-*Long-record daily gauges, new mesonets, and more*
 :::
+
+---
+### SPATIALLY VARYING COVARIATES {.text-grass-green style="font-size: 80px;"}
+### IMPROVES INFERENCE {.text-rice-gray style="font-size: 60px; margin-left: 60px;"}
+
+**framework:** Bayesian hierarchical model (flexible, probabilistic)
+
+**hypothesis:** parameters are smooth
+
+**model:** latent parameters as spatial fields (Moran basis functions)
+
+
+::: {style="text-align: center;"}
+![](_assets/img/results/p_quantiles_basis.png)
 :::
-::: {.column width="45%"}
-
-::: {.incremental style="font-size: 1.25em;"}
-- **framework:** Bayesian hierarchical model (flexible, probabilistic)
-- **hypothesis:** parameters are smooth
-- **model:** latent parameters as spatial fields (Moran basis functions)
+::: {style="font-size: 24px; color: #7C7E7F;"}
+Histogram showing the quantile of each observed annual maximum given the posterior predictive distribution for that location and year.
+For a perfect model, this will be uniformly distributed.
 :::
+
+## {data-menu-title="Hazard already up"}
+### HAZARD HAS ALREADY INCREASED {.text-grass-green style="font-size: 80px;"}
+
+![](_assets/img/results/p_change_1980.png)
+
+::: {style="font-size: 24px; color: #7C7E7F;"}
+Change in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour precipitation 
 :::
-::::
 
-## POSITIVE TRENDS FOR MOST OF TEXAS {.text-indigo-pink}
+## {data-menu-title="Hazard will keep increasing"}
+### HAZARD WILL FURTHER INCREASE {.text-grass-green style="font-size: 80px;"}
 
-![](_assets/img/lu-2023/2023-11-09/map_difference.png)
+![](_assets/img/results/p_rl100_Hou.png)
 
-## WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS
+::: {style="font-size: 24px; color: #7C7E7F;"}
+Posterior expected 100 year rainfall as a function of time
+:::
 
-![](_assets/img/lu-2023/2023-11-09/map_difference.png)
+## {data-menu-title="Summary" background-image="_assets/img/external/martinez-harvey.jpeg" background-opacity="0.3"}
 
-## [UNCERTAINTY {{< fa arrow-circle-down >}}; CALIBRATION {{< fa circle-check >}}]{style="font-size: 1.3em;"}
-
-## {data-menu-title="Summary" background-image="_assets/img/martinez-harvey.jpeg" background-opacity="0.3"}
-
-### [Spatially Varying Covariates Model]{.hl .hl-rice-blue} {.text-light-gray style="font-size: 2.25em;"}
-
-::: {style="font-size: 1.6em; margin-top: 100px;"}
+::: {style="font-size: 65px; margin-top: 100px;"}
 :::{.fragment .fade-in fragment-index=1}
-[{{< fa circle-check >}}]{style="color: #34b233"} **Estimates for ungauged locations & future years**
+[{{< fa circle-check >}}]{style="color: #34b233"} **Can't do statistical analysis without stats**
 :::
 :::{.fragment .fade-in fragment-index=2}
-[{{< fa circle-check >}}]{style="color: #34b233"} **Pool information to reduce uncertainty & improve calibration**
+[{{< fa circle-check >}}]{style="color: #34b233"} **Nonstationarity should be the default assumption**
 :::
 :::{.fragment .fade-in fragment-index=3}
-[{{< fa circle-xmark >}}]{style="color: #ff0000b3"} **Resolve sampling variability or deep uncertainties**
+[{{< fa circle-check >}}]{style="color: #34b233"} **Need better stats (e.g., spatially varying covariates!) to fit nonstationary models**
+:::
+:::{.fragment .fade-in fragment-index=4}
+[{{< fa circle-xmark >}}]{style="color: #ff0000b3"} **Sampling variability is immortal**
 :::
 :::
-::: {.fragment .fade-in fragment-index=5 style="font-size: 0.9em; margin-top: 125px; color: #050505;"}
+::: {.fragment .fade-in fragment-index=5 style="font-size: 45px; margin-top: 125px;"}
 [For more, see Yuchen Lu's poster H21T-1602 on Tuesday morning]{.hl .hl-light-gray}
 :::
 
