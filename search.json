@@ -11,7 +11,7 @@
     "href": "index.html#section-1",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "…for better or for worse,\nIDF CURVES UNDERPIN RISK ASSESSMENT\n\n\n\n\n\n\n\n\n\n James Doss-Gollin\n\n\nBates et al. (2021) fig. 8\n\n\n Mark Wolfe/FEMA News"
+    "text": "for better or for worse,\nIDF CURVES UNDERPIN RISK ASSESSMENT\n\n\n\n\n\n\n\n\n\n\n James Doss-Gollin\n\n\n\nBates et al. (2021) fig. 8\n\n\n\n Mark Wolfe/FEMA News"
   },
   {
     "objectID": "index.html#section-2",
@@ -25,63 +25,35 @@
     "href": "index.html#section-3",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "THE CLIMATE IS CHANGING BUT SAMPLING VARIABILITY CHALLENGES TREND ESTIMATION\n\nFagnant et al. (2020): each line is a gauge from the same \\(5^\\circ \\times 3^\\circ\\) region"
+    "text": "THE CLIMATE IS CHANGING BUT SAMPLING VARIABILITY IMPEDES TREND ESTIMATION\n\nFagnant et al. (2020): Rolling window estimates of the 100 year return level. Each line shows a different gauge from the same \\(5^\\circ \\times 3^\\circ\\) region."
   },
   {
     "objectID": "index.html#section-4",
     "href": "index.html#section-4",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "LET’S JUST USE ESMS?\n\n Better sample weather given climate\n\n\n Physical constraints improve projection\n\n\n Drizzle bias and dynamical limitations motivate downscaling / bias correction  still need a statistical model!"
+    "text": "EARTH SYSTEM MODELS:\n\n Better sample weather given climate\n\n\n Physical constraints improve extrapolation\n\n\n Limitations (drizzle bias, dynamics, etc.) motivate bias correction\n\n\n still need a statistical model!"
   },
   {
     "objectID": "index.html#section-5",
     "href": "index.html#section-5",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "NONSTATIONARY MODELS\nNEED MORE PARAMETERS\n\nGeneric nonstationary model for annual maximum precipitation: \\[\ny(\\mathbf{s}, t) \\sim \\text{GEV} \\left( \\mu(\\mathbf{s}, t), \\sigma(\\mathbf{s}, t), \\xi(\\mathbf{s}, t) \\right)\n\\]\n\n\nProcess-informed models condition parameters on climate indices \\(\\mathbf{x}(t)\\) (Cheng & AghaKouchak, 2014; Schlef et al., 2023) \\[\n\\theta(\\mathbf{s}, t) = \\alpha + \\underbrace{\\sum_{j=1}^J \\beta_j(\\mathbf{s}) x_j(t)}_\\text{additional parameters}\n\\]"
+    "text": "HAZARD HAS ALREADY INCREASED\n\n\nChange in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour precipitation"
   },
   {
     "objectID": "index.html#section-6",
     "href": "index.html#section-6",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "NONSTATIONARY MODELS\nINCREASE ESTIMATION UNCERTAINTY\n\nMore parameters, same data  more uncertainty (Serinaldi & Kilsby, 2015)"
-  },
-  {
-    "objectID": "index.html#better-data-better-stats",
-    "href": "index.html#better-data-better-stats",
-    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
-    "section": "BETTER DATA 🤝 BETTER STATS",
-    "text": "BETTER DATA 🤝 BETTER STATS\n\n\ninsert here: map of gauges used\n\nLong-record daily gauges, new mesonets, and more\n\n\n\n\nframework: Bayesian hierarchical model (flexible, probabilistic)\nhypothesis: parameters are smooth\nmodel: latent parameters as spatial fields (Moran basis functions)"
-  },
-  {
-    "objectID": "index.html#positive-trends-for-most-of-texas",
-    "href": "index.html#positive-trends-for-most-of-texas",
-    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
-    "section": "POSITIVE TRENDS FOR MOST OF TEXAS",
-    "text": "POSITIVE TRENDS FOR MOST OF TEXAS"
-  },
-  {
-    "objectID": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
-    "href": "index.html#we-find-higher-hazard-than-atlas-14-except-in-harvey-impacted-areas",
-    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
-    "section": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS",
-    "text": "WE FIND HIGHER HAZARD THAN ATLAS-14 EXCEPT IN HARVEY-IMPACTED AREAS"
-  },
-  {
-    "objectID": "index.html#uncertainty-fa-arrow-circle-down-calibration-fa-circle-check",
-    "href": "index.html#uncertainty-fa-arrow-circle-down-calibration-fa-circle-check",
-    "title": "Nonstationary Rainfall Frequency Estimates for Texas",
-    "section": "UNCERTAINTY ; CALIBRATION ",
-    "text": "UNCERTAINTY ; CALIBRATION"
+    "text": "HAZARD WILL FURTHER INCREASE\n\n\nPosterior expected 100 year rainfall as a function of time"
   },
   {
     "objectID": "index.html#section-7",
     "href": "index.html#section-7",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "Spatially Varying Covariates Model\n\n\n Estimates for ungauged locations & future years\n\n\n Pool information to reduce uncertainty & improve calibration\n\n\n Resolve sampling variability or deep uncertainties\n\n\n\nFor more, see Yuchen Lu’s poster H21T-1602 on Tuesday morning"
+    "text": "Can’t do statistical analysis without stats\n\n\n Nonstationarity should be the default assumption\n\n\n Need better stats (e.g., spatially varying covariates!) to fit nonstationary models\n\n\n Sampling variability is immortal\n\n\n\nFor more, see Yuchen Lu’s poster H21T-1602 on Tuesday morning"
   },
   {
     "objectID": "index.html#references",
