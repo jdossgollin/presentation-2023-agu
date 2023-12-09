@@ -39,27 +39,27 @@
     "href": "index.html#section-5",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "HAZARD HAS ALREADY INCREASED\n\n\nChange in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour precipitation"
+    "text": "HAZARD HAS ALREADY INCREASED\n\n\nChange in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour precipitation. Preliminary results."
   },
   {
     "objectID": "index.html#section-6",
     "href": "index.html#section-6",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "HAZARD WILL FURTHER INCREASE\n\n\nPosterior expected 100 year rainfall as a function of time"
+    "text": "HAZARD WILL FURTHER INCREASE\n\n\nPosterior expected 100 year rainfall as a function of time. Preliminary results."
   },
   {
     "objectID": "index.html#section-7",
     "href": "index.html#section-7",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "Can’t do statistical analysis without stats\n\n\n Nonstationarity should be the default assumption\n\n\n Need better stats (e.g., spatially varying covariates!) to fit nonstationary models\n\n\n Sampling variability is immortal\n\n\n\nFor more, see Yuchen Lu’s poster H21T-1602 on Tuesday morning"
+    "text": "CONCLUSIONS\n\n\n Can’t do statistical analysis without stats\n\n\n Nonstationarity should be the default assumption\n\n\n Need better stats (e.g., spatially varying covariates!) to fit nonstationary models\n\n\n Sampling variability is immortal\n\n\n\nFor more, see Yuchen Lu’s poster H21T-1602 on Tuesday morning"
   },
   {
     "objectID": "index.html#references",
     "href": "index.html#references",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "References",
-    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nCheng, L., & AghaKouchak, A. (2014). Nonstationary precipitation intensity-duration-frequency curves for infrastructure design in a changing climate. Scientific Reports, 4(1), 7093. https://doi.org/10.1038/srep07093\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nSchlef, K. E., Kunkel, K. E., Brown, C., Demissie, Y., Lettenmaier, D. P., Wagner, A., et al. (2023). Incorporating non-stationarity from climate change into rainfall frequency and intensity-duration-frequency (IDF) curves. Journal of Hydrology, 616, 128757. https://doi.org/10.1016/j.jhydrol.2022.128757\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013\n\n\n\n\n@jdossgollin"
+    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013\n\n\n\n\n@jdossgollin"
   }
 ]
