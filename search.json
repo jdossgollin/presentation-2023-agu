@@ -46,7 +46,7 @@
     "href": "index.html#section-6",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "",
-    "text": "HAZARD WILL FURTHER INCREASE\n\n\nPosterior expected 100 year rainfall as a function of time. Projections use RCP6 CO\\(_2\\) concentrations. Preliminary results."
+    "text": "HAZARD WILL FURTHER INCREASE\n\n\n\n\nPosterior expected 100 year return level for 24 hour rainfall over time. Projections use RCP6 CO\\(_2\\) concentrations. We compare to NOAA Atlas 14, a widely used stationary analyis (Perica et al., 2018). Preliminary results."
   },
   {
     "objectID": "index.html#section-7",
@@ -60,6 +60,6 @@
     "href": "index.html#references",
     "title": "Nonstationary Rainfall Frequency Estimates for Texas",
     "section": "References",
-    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013\n\n\n\n\n@jdossgollin"
+    "text": "References\n\n\nBates, P. D., Quinn, N., Sampson, C., Smith, A., Wing, O., Sosa, J., et al. (2021). Combined modeling of US fluvial, pluvial, and coastal flood hazard under current and future climates. Water Resources Research, 57(2), e2020WR028673. https://doi.org/10.1029/2020WR028673\n\n\nFagnant, C., Gori, A., Sebastian, A., Bedient, P. B., & Ensor, K. B. (2020). Characterizing spatiotemporal trends in extreme precipitation in Southeast Texas. Natural Hazards, 104(2), 1597–1621. https://doi.org/10.1007/s11069-020-04235-x\n\n\nPerica, S., Pavlovic, S., St. Laurent, M., Trypaluk, C., Unruh, D., & Wilhite, O. (2018). NOAA Atlas 14 (No. Volume 11 Version 2.0: Texas) (p. 283). Silver Spring, MD: National Weather Service, National Oceanic and Atmospheric Administration, U.S. Department of Commerce.\n\n\nSerinaldi, F., & Kilsby, C. G. (2015). Stationarity is undead: Uncertainty dominates the distribution of extremes. Advances in Water Resources, 77, 17–36. https://doi.org/10.1016/j.advwatres.2014.12.013\n\n\n\n\nJames Doss-Gollin @ AGU 2023"
   }
 ]
