@@ -31,9 +31,9 @@ format:
     html-math-method: mathjax
 ---
 
-## {data-menu-title="Title?" background-image="_assets/img/external/martinez-harvey.jpeg" background-opacity="0.7"}
+## {data-menu-title="Title" background-image="_assets/img/external/martinez-harvey.jpeg" background-opacity="0.7"}
 
-::: {.text-light-gray style="font-size: 70px; margin-top: 150px;"}
+::: {.text-light-gray style="font-size: 60px; margin-top: 150px;"}
 ### [Nonstationary Precipitation]{.hl .hl-rice-blue} 
 ### [Frequency Estimates for Texas]{.hl .hl-rice-blue}
 :::
@@ -52,12 +52,12 @@ format:
 #### [Benjamin Seiyon Lee (GMU)]{.hl .hl-brick-red} {.text-light-gray}
 #### [John Nielsen-Gammon (TAMU)]{.hl .hl-brick-red} {.text-light-gray}
 #### [Rewati Niraula (TWDB)]{.hl .hl-brick-red} {.text-light-gray}
-:::
-:::
-:::
-:::
 
-#### [\@AGU 2023, NH14B-07]{.hl .hl-grass-green} {.text-light-gray style="margin-top: 50px; text-align: right;"}
+#### [\@AGU 2023, NH14B-07]{.hl .hl-grass-green} {.text-light-gray style="margin-top: 50px;"}
+:::
+:::
+:::
+:::
 
 ##  {data-menu-title="IDF Curves are used for everything"}
 
@@ -214,11 +214,11 @@ Change in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour pr
 ### HAZARD WILL FURTHER INCREASE {.text-grass-green style="font-size: 80px;"}
 
 ::: {style="text-align: center;"}
-![](_assets/img/results/p_rl100_timeseries.png)
+![](_assets/img/results/p_rl100_timeseries_1h.png){width=1100px}
 :::
 
 ::: {style="font-size: 24px; color: #7C7E7F;"}
-Posterior expected 100 year return level for 24 hour rainfall over time.
+Posterior expected 100 year return level for 1-hour rainfall over time.
 Projections use RCP6 CO$_2$ concentrations.
 We compare to NOAA Atlas 14, a widely used stationary analyis [@atlas14_texas:2018].
 **Preliminary results.**
