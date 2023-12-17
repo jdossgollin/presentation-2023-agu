@@ -49,87 +49,35 @@ $link-color: $rice-gray;
     padding: 30px;
 }
 
-// noise effect for text
-@mixin scratched($baseTurbFreq: 0.005, $turbOctaves: 1, $displaceScale: 5) {
-    filter: contrast(200%) url('data:image/svg+xml,\
-      <svg xmlns="http://www.w3.org/2000/svg">\
-        <filter id="filter" x="-10%" y="-10%" width="120%" height="120%">\
-          <feTurbulence baseFrequency="#{$baseTurbFreq}" numOctaves="#{$turbOctaves}" result="turbulence" />\
-          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="#{$displaceScale}" xChannelSelector="R" yChannelSelector="G"/>\
-        </filter>\
-      </svg>#filter');
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-    // slide headers
-    .reveal .text-brick-red & {
-        color: $brick-red
-    }
-
-    .reveal .text-rice-gray & {
-        color: $rice-gray
-    }
-
-    .reveal .text-light-gray & {
-        color: $light-gray
-    }
-
-    .reveal .text-midnight-blue & {
-        color: $midnight-blue
-    }
-
-    .reveal .text-grass-green {
-        color: $grass-green
-    }
-
-    .reveal .text-warm-yellow {
-        color: $warm-yellow
-    }
-
-    .reveal .text-lime-cyan & {
-        background: linear-gradient(45deg, #00aadd, #66dd00);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .reveal .text-orange-gold & {
-        background: linear-gradient(45deg, #f37335, #fdc830);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .reveal .text-indigo-pink & {
-        background: linear-gradient(45deg, #4a00e0, #ff0099);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .reveal .text-red-brown & {
-        background: linear-gradient(45deg, #ed213a, #93291e);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .reveal .text-black-white & {
-        background: linear-gradient(45deg, #333, #ccc);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-}
-
 .reveal {
     section {
+
+        h2,
+        h3 {
+            font-size: 52px;
+            color: $grass-green;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+
+        h4,
+        h5,
+        h6 {
+            color: $grass-green;
+            font-weight: normal;
+        }
+
+        h4 {
+            font-size: 52px;
+        }
+
+        h5 {
+            font-size: 44px;
+        }
+
+        h6 {
+            font-size: 36px;
+        }
 
         h1,
         h2,
@@ -163,34 +111,6 @@ h6 {
                 color: $warm-yellow
             }
 
-            &.text-lime-cyan {
-                background: linear-gradient(45deg, #00aadd, #66dd00);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-
-            &.text-orange-gold {
-                background: linear-gradient(45deg, #f37335, #fdc830);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-
-            &.text-indigo-pink {
-                background: linear-gradient(45deg, #4a00e0, #ff0099);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-
-            &.text-red-brown {
-                background: linear-gradient(45deg, #ed213a, #93291e);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-
             &.text-black-white {
                 background: linear-gradient(45deg, #333, #ccc);
                 -webkit-background-clip: text;
@@ -221,11 +141,12 @@ h6 {
     }
 }
 
+
 .hl {
     padding-inline: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-inline: 1rem;
+    //margin-inline: 1rem;
     background: #99999966;
 
     &-grass-green {
@@ -247,6 +168,7 @@ h6 {
     &-light-gray {
         background: $light-gray;
     }
+
 }
 
 // source code (probably only looks reasonable on dark tbh
@@ -262,5 +184,20 @@ h6 {
 }
 
 .reveal .footer {
+    color: $rice-gray;
+}
+
+.reveal .caption {
+    font-size: 24px;
+    color: $rice-gray;
+}
+
+.reveal .figcaption {
+    font-size: 24px;
+    color: $rice-gray;
+}
+
+.reveal .bigcaption {
+    font-size: 36px;
     color: $rice-gray;
 }

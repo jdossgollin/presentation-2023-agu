@@ -1,0 +1,405 @@
+---
+title: Assessing and simulating hydroclimate risks to infrastructure systems (and their users) to support bottom-up planning
+titlelines: 
+  - Assessing and simulating
+  - hydroclimate risks to infrastructure
+  - systems (and their users) to support
+  - risk management
+author: James Doss-Gollin
+affiliation: Rice Civil & Environmental Engineering
+date: 2024-01-08
+venue: PNNL
+
+format:
+  revealjs:
+    self-contained: true
+
+    width: 1600
+    height: 900
+    theme: [default, ../../_assets/sass/theme-rice.scss]
+    standalone: true
+    
+    # page numbering
+    slide-number: c/t
+    show-slide-number: all
+    # page layout and transition
+    center-title-slide: true
+
+    transition: none
+    toc: false
+    history: false
+    menu:
+        numbers: true
+    
+    # code, links, and refs
+    link-external-newwindow: true
+    citations-hover: true
+    code-annotations: below
+    date-format: long
+    pdf-separate-fragments: true
+
+    html-math-method: katex
+    template-partials:
+      - "../../_assets/html/title-slide.html"
+
+    hash-type: number
+
+title-slide-attributes:
+  data-background-image: ../../_assets/img/external/martinez-harvey.jpeg
+  data-background-opacity: "0.7"
+
+filters: 
+  - reveal-auto-agenda
+
+auto-agenda:
+  bullets: numbered
+  heading: Today
+--- 
+
+## Some example decision problems
+
+- When and how high to heighten a levee?
+- How to prioritize houses for floodproofing?
+- Dam sizing
+- Sponge city design
+- Firm generation, storage, or transmission for peak heating?
+
+::: {.callout-tip}
+## Sequential optimization problems with large action spaces, many or undefined objectives, and interacting uncertainties.
+:::
+
+## What hydroclimate science do these decisions need?
+
+::: {.columns layout-valign="bottom"}
+::: {.column .fragment}
+![Sequential multiobjective policy search under deep and dynamic uncertainty [@keller_management:2021]](../../_assets/img/external/keller-2021-fig6.png){height=500px}
+:::
+::: {.column .fragment}
+![Drivers at multiple timescales [@doss-gollin_robustadaptation:2019]](../../_assets/img/2019-jdg-robust/conceptual-sketch.jpg){height=500px}
+:::
+:::
+
+::: {.notes}
+1. So if we want to inform these decisions, what do we need?
+1. These are sequential decision problems. We often have multiple objectives or metrics of success. And we are often subject to deep and dynamic uncertainty, although this doesn't mean that we are in a state of total and abject ignorance.
+1. Especially at shorter time scales, uncertainty is often dominated by potentially predictible modes of variability.
+:::
+
+# Risks of extreme temperatures for electricity systems
+
+## Feb 2021: cascading impacts
+
+## {data-menu-title="Historic TX Cold"}
+:::: {.columns}
+::: {.column width="55%"}
+### Precedent for February 2021 temperatures in Texas {style="margin-top: 250px;"}
+
+::: {.caption style="margin-top: 250px;"}
+Composite anomalies during historical 1-, 3-, and 5-day cold snaps in Texas [@doss-gollin_txtreme:2021]
+:::
+:::
+::: {.column width="45%"}
+![](../../_assets/img/2021-TXtreme/historic_events_era5_TX.jpg)
+:::
+::::
+
+## Precedent for February 2021 temperatures in Texas
+
+![(L) time series and (R) intensity-duration-frequency curves for our "inferred demand for heating" metric, which aggregates heating degree hours across space, weighting by population [ @doss-gollin_txtreme:2021].](../../_assets/img/2021-TXtreme/ERCOT_HDD_IDF_MLE_popweighted.jpg)
+
+
+## Locally unexceptional temps {{< fa circle-arrow-right >}} severe impacts
+
+![](../../_assets/img/2021-TXtreme/local_rt_era5.jpg){height="90%"}
+
+## {data-menu-title="Amonkar}
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {style="margin-top: 250px;"}
+#### Trends in **average** demand for heating/cooling [but **winter peaks** dominated by interannual variability]{.fragment fragment-index=2}
+:::
+::: {.caption style="margin-top: 250px;"}
+@amonkar_heatingcooling:2023 uses the same inferred demand metric to assess climate-driven impacts on demand for heating and cooling.
+:::
+:::
+::: {.column width="55%"}
+![](../../_assets/img/2023-amonkar-differential/ISO_Plots_1.jpg){width=750px}
+
+::: {.fragment fragment-index=2}
+![](../../_assets/img/2023-amonkar-differential/ISO_Plots_2.jpg){width=750px}
+:::
+:::
+::::
+
+## Climate change impact on hot/cold waves
+
+![](../../_assets/img/2024-singh-widespread/fig-4.png){width="100%"}
+
+::: {.caption}
+Frequency: the number of widespread extremes in a season.
+Extent: the fraction of the region under temperature extremes.
+Duration: the number of consecutive widespread extremes.
+Cumulative intensity (CI): the sum of the standardized temperature anomalies multiplied by area.
+From @singh_potential:2023.
+:::
+
+## {data-menu-title="Deepti 2"}
+
+:::: {.columns}
+::: {.column width="30%"}
+::: {style="margin-top: 100px;"}
+#### Can we generate renewable power during temperature extremes?
+:::
+::: {.caption style="margin-top: 250px;"}
+Standardized temperature anomalies and (unstandardized) windspeed and solar radiation anomalies during two recent temperature extremes [@singh_potential:2023].
+:::
+:::
+::: {.column width="70%"}
+![](../../_assets/img/2024-singh-widespread/fig-3.png){width="100%"}
+:::
+::::
+
+## Future directions
+
+- Model more complete systems (generation, transmission, demand, markets, ...)
+- How much long-duration storage is needed? What drives this estimate?
+- Combing long-duration storage, transmission, firm generation, and demand response
+
+# Understanding large-scale moisture transport to inform river flood risk assessment
+
+## {data-background-image="../../_assets/img/external/drone-asuncion.jpg"}
+
+::: {.caption}
+{{< fa camera-retro >}} Municipalidad de Asunción
+:::
+
+## 
+
+### Persistent circulations drive riverine flooding
+
+![](../../_assets/img/2018-jdg-lprb/rain_wt_201516.jpg){width="1300px"}
+![](../../_assets/img/2018-jdg-lprb/wt_composite.jpg){.fragment fragment-index=2 width="1300px"}
+
+::: {.caption}
+(T): area-averaged rainfall and the "weather type" for each day. 
+[(B): composite anomalies for each weather type [@doss-gollin_pyfloods:2018]]{.fragment fragment-index=2}
+:::
+
+##
+
+### Organized hemispheric circulations {{< fa circle-arrow-right >}} structured moisture transport {{< fa circle-arrow-right >}} river flooding
+
+![Composite anomalies before, during, and after "regional extreme precipitation" days in the Ohio River Basin [@farnham_credibly:2018]](../../_assets/img/2018-djf-orb/Figure_4.jpg){style="margin-top: 150px;"}
+
+##
+
+### ESMs have [dynamical biases]{style="color: #00205B;"} not readily resolved through standard bias correction schemes
+
+![Composite anomalies during "regional extreme precipitation" days in the Ohio River Basin from reanalysis and GFDL CM3 ensemble members [@farnham_credibly:2018]](../../_assets/img/2018-djf-orb/Figure_5.png){style="margin-top: 150px;"}
+
+## Skillful statistical-dynamical model
+
+## Future directions
+
+- Expand beyond riverine flooding (e.g., weather generators)
+- Better inclusion of paleo
+
+# Better estimates of nonstationary precipitation frequency
+
+##  {data-menu-title="IDF Curves are used for everything"}
+
+::::: {.columns}
+:::: {.column width="40%"}
+#### for better or for worse, {.text-rice-gray style="font-size: 24px; margin-top: 50px;"}
+
+### IDF CURVES UNDERPIN RISK ASSESSMENT {.text-grass-green style="margin-top:50px;"}
+
+![](../../_assets/img/external/idf.png)
+::::
+:::: {.column width="60%"}
+::: {.r-stack}
+![](../../_assets/img/external/jdg-buffalo-drainage.jpeg){.fragment .fade-in-then-semi-out fragment-index=1 style="transform:rotate(0deg);"}
+
+![](../../_assets/img/external/bates-2021-fig8gh.jpg){.fragment .fade-in-then-semi-out fragment-index=2 style="transform:rotate(5deg);"}
+
+![](../../_assets/img/external/wolfe_fema.jpg){.fragment .fade-in-then-semi-out fragment-index=3 style="transform:rotate(-5deg);"}
+:::
+::: {.r-stack}
+::: {.caption .fragment .fade-in-then-out fragment-index=1"}
+{{< fa camera-retro >}} James Doss-Gollin
+:::
+::: {.caption .fragment .fade-in-then-out fragment-index=2"}
+@bates_modeling:2021
+:::
+::: {.caption .fragment .fade-in-then-out fragment-index=3"}
+{{< fa camera-retro >}} Mark Wolfe/FEMA News
+:::
+:::
+::::
+:::::
+
+##  {data-menu-title="Available guidance leaves gaps"}
+
+::::: {.columns}
+:::: {.column width="30%"}
+### Existing guidance leaves gaps {.text-grass-green style="margin-top:225px;"}
+::::
+:::: {.column width="70%"}
+::: {.r-stack}
+![](../../_assets/img/meme/fight-idf-1.png)
+
+![](../../_assets/img/meme/fight-idf-2.png){.fragment .fade-in-then-semi-out fragment-index=1}
+
+![](../../_assets/img/meme/fight-idf-3.png){.fragment .fade-in-then-semi-out fragment-index=2}
+
+![](../../_assets/img/meme/fight-idf-4.png){.fragment .fade-in-then-semi-out fragment-index=3}
+:::
+::::
+:::::
+
+## {data-menu-title="Climate is changing but sampling variability challenges trend estimation"}
+
+::::: {.columns text-valign="center"}
+:::: {.column width="65%"}
+![](../../_assets/img/external/fagnant-spatiotemporal-2020-5.jpeg){width="100%"}
+::::
+:::: {.column width="35%"}
+### THE CLIMATE IS CHANGING BUT [SAMPLING VARIABILITY]{style="color: #00205B;"} IMPEDES TREND ESTIMATION {style="margin-top: 75px;"}
+
+::: {.caption style="margin-top: 150px;"}
+@fagnant_spatiotemporal:2020: Rolling window estimates of the 100 year return level. Each line shows a different gauge from the same $5^\circ \times 3^\circ$ region.
+:::
+::::
+:::::
+
+## {data-menu-title="ESMs" background-image="../../_assets/img/external/esm-schematic.png" background-opacity="0.3"}
+### [Earth system models]{.hl .hl-grass-green} {style="color: white;"}
+
+::: {.fragment .fade-in style="margin-top: 100px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Better sample weather given climate
+:::
+::: {.fragment .fade-in style="margin-top: 20px;"}
+[{{< fa circle-plus >}}]{style="color: #008000"} Physical constraints improve extrapolation
+:::
+::: {.fragment .fade-in style="margin-top: 20px;"}
+[{{< fa circle-minus >}}]{style="color: #ff0000b3"} **Limitations** (drizzle bias, dynamics, etc.) motivate bias correction
+:::
+::: {.fragment .fade-in style="margin-left: 60px; color: #ff0000b3;"}
+{{< fa arrow-circle-right >}} **still need a statistical model!**
+:::
+
+##
+
+### Nonstationary models
+### Need more parameters {.text-rice-gray style="margin-left: 60px;"}
+
+::: {style="margin-top: 40px;"}
+**Stationary:** $y(\mathbf{s}, t) \sim \text{GEV} \left( \mu(\mathbf{s}), \sigma(\mathbf{s}), \xi(\mathbf{s}) \right)$
+:::
+
+::: {.fragment .fade-in style="margin-top: 40px;"}
+**Nonstationary:** $y(\mathbf{s}, t) \sim \text{GEV} \left( \mu(\mathbf{s}, t), \sigma(\mathbf{s}, t), \xi(\mathbf{s}, t) \right)$
+:::
+
+::: {.fragment .fade-in style="margin-top: 40px;"}
+**Process-informed** nonstationary models: condition on climate indices $\mathbf{x}(t)$:
+$$
+\theta(\mathbf{s}, t) = \alpha + \underbrace{\sum_{j=1}^J \beta_j(\mathbf{s}) x_j(t)}_\text{additional parameters}
+$$
+:::
+
+##
+
+### Nonstationary models
+###  increase estimation uncertainty {.text-rice-gray style="margin-left: 60px;"}
+
+![](../../_assets/img/external/serinaldi-undead-2015-4ab.jpg){width="100%"}
+
+::: {style="font-size: 24px; color: #7C7E7F;"}
+More parameters, same data {{< fa arrow-right-long >}} more uncertainty [@serinaldi_undead:2015]
+:::
+
+## Spatially varying covariates
+
+We model statistical parameters as latent spatial fields in a hierarchical Bayesian framework
+
+## Improved estimates
+
+
+![](../../_assets/img/2024-lu-texas/p_quantiles_basis.png){width="100%"}
+
+::: {.caption}
+Histogram showing the quantile of each observed annual maximum given the posterior predictive distribution for that location and year.
+For a perfect model, this will be uniformly distributed.
+**Preliminary results.**
+:::
+
+## Hazard has already increased
+
+![](../../_assets/img/2024-lu-texas/p_change_1980.png)
+
+::: {.caption}
+Change in 100 year return level in 2022 minus 1980 for (L) 1- and (R) 24-hour precipitation.
+**Preliminary results.**
+:::
+
+## Hazard will further increase
+
+::: {style="text-align: center;"}
+![](../../_assets/img/2024-lu-texas/p_rl100_timeseries_1h.png){width=1100px}
+:::
+
+::: {.caption}
+Posterior expected 100 year return level for 1-hour rainfall over time.
+Projections use RCP6 CO$_2$ concentrations.
+We compare to NOAA Atlas 14, a widely used stationary analyis [@atlas14_texas:2018].
+**Preliminary results.**
+:::
+
+## Future directions
+
+::: {.incremental}
+1. Incorporate satellite data
+1. Apply to other hazards
+1. Address spatially correlated hazards (from marginal to joint PDF)
+:::
+
+# ML for urban flood risk assessment
+
+## GNN for 2D flooding
+
+![Arnold Kazadi et al.](../../_assets/img/2023-kazadi-iclr-flood-prediction/framework3.png)
+
+## Nice results
+
+##
+
+#### How does the spatiotemporal distribution of rainfall across an urban watershed affect flood response?
+
+![](../../_assets/img/2024-liu-diffusion/liu-downscaling.png)
+
+## Future directions
+
+::: {.incremental}
+1. Synthetic weather {{< fa arrow-right >}} local precip {{< fa arrow-right >}} flood extent & velocity {{< fa arrow-right >}} impacts (direct damage, transportation, etc)
+1. Use as a screening tool for infrastructure
+1. Application to other hazards (LSTM rainfall-runoff + GNN river routing)
+:::
+
+# Wrapup
+
+## Other fun projects
+
+- Bridging probabilistic and non-probabilistic approaches to DMDU
+- Value of information for sequential decision problems
+- Modular, adaptive, and decentralized/distributed water systems (affordability, resilience, equity, reliability).
+- Better depth-damage functions
+- Implications of different equity
+
+## Conclusions
+
+## References {.smaller .scrollable}
+
+:::{#refs}
+:::

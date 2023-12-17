@@ -1,0 +1,40 @@
+<section id="$idprefix$title-slide" $for(title-slide-attributes/pairs)$ $it.key$="$it.value$" $endfor$>
+    <div style="margin-top: 150px; text-align: left;">
+        $for(titlelines)$
+        <h3 style="font-size: 70px; color: #E0E2E6;">
+            <span class="hl hl-rice-blue">
+                $titlelines$
+            </span>
+        </h3>
+        $endfor$
+    </div>
+    <div class="columns" ;>
+        <section style="margin-top: 150px">
+            <div class="column" style="float:left; width: 55%">
+                <section style="text-align: left;">
+                    <h3><span class="hl hl-rice-blue"
+                            style="text-transform: capitalize; color: #E0E2E6; font-size: 50px;">
+                            $author$
+                        </span></h3>
+                    <h5><span class="hl hl-rice-blue">
+                            $affiliation$
+                        </span></h5>
+                </section>
+            </div>
+            <div class="column" style="float:right; width: 45%; margin-top: 45px;">
+                <section style="text-align: right;">
+                    $if(coauthors)$
+                    $for(coauthors)$
+                    <h5 class="text-light-gray"><span class="hl hl-brick-red">
+                            $coauthors$
+                        </span></h5>
+                    $endfor$
+                    $endif$
+                    <h5 class="text-light-gray" style="margin-top: 50px;"><span
+                            class="hl hl-grass-green">@$venue$</span></h5>
+                    <h5 class="text-light-gray"><span class="hl hl-grass-green">$date$</span></h5>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>

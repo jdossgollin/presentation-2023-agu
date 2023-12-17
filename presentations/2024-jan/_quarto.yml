@@ -3,8 +3,9 @@ project:
   preview:
     port: 4200
   resources:
-    - "_assets/img"
-    - "_assets/font"
+    - "../../_assets/img"
+    - "../../_assets/font"
+    - "../../_assets/html"
 
 website:
   page-navigation: false
@@ -16,5 +17,5 @@ website:
   open-graph: true
 
 # citations
-bibliography: _bibliography/library-bibtex.bib
-csl: _assets/references/american-geophysical-union.csl
+bibliography: ../../_bibliography/library.bib
+csl: ../../_assets/references/american-geophysical-union.csl
